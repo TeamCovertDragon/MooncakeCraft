@@ -25,17 +25,17 @@ public class Mooncake extends ItemFood {
 
     @Override
     public int getHealAmount(ItemStack stack) {
-        return MooncakeFilling.VALUES[stack.getMetadata()].hunger;
+        return MooncakeFilling.getByOrdinal(stack.getMetadata()).hunger;
     }
 
     @Override
     public float getSaturationModifier(ItemStack stack) {
-        return MooncakeFilling.VALUES[stack.getMetadata()].saturation;
+        return MooncakeFilling.getByOrdinal(stack.getMetadata()).saturation;
     }
 
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return "item.mooncakecraft.mooncake." + MooncakeFilling.VALUES[stack.getMetadata()].localizationKey;
+        return "item.mooncakecraft.mooncake." + MooncakeFilling.getByOrdinal(stack.getMetadata()).localizationKey;
     }
 
     @Override

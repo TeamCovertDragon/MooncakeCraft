@@ -13,6 +13,11 @@ import java.util.Locale;
 public enum MooncakeFilling {
 
     /**
+     * A place holder for those who failed to make a delicious mooncake.
+     */
+    INVALID(0, 0F),
+
+    /**
      * Simplified Chinese "莲蓉".
      */
     LOTUS_SEED_PASTE(6, 6.0F),
@@ -43,6 +48,10 @@ public enum MooncakeFilling {
     LOTUS_SEED_PASTE_WITH_DOUBLE_YOLK(15, 15.0F);
 
     public static final MooncakeFilling[] VALUES = MooncakeFilling.values();
+
+    public static MooncakeFilling getByOrdinal(int ordinal) {
+        return ordinal < VALUES.length ? VALUES[ordinal] : INVALID;
+    }
 
     final int hunger;
     final float saturation;

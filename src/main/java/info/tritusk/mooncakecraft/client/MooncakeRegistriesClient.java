@@ -10,6 +10,7 @@ package info.tritusk.mooncakecraft.client;
 
 import info.tritusk.mooncakecraft.MooncakeConstants;
 import info.tritusk.mooncakecraft.item.MooncakeFilling;
+import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
@@ -21,6 +22,11 @@ public class MooncakeRegistriesClient {
 
     @SubscribeEvent
     public static void onModelRegistry(ModelRegistryEvent event) {
-        ModelLoader.setCustomMeshDefinition(MooncakeConstants.MOONCAKE_ITEM, itemStack -> new ModelResourceLocation("mooncake_" + MooncakeFilling.VALUES[itemStack.getMetadata()].getLocalizationKey(), "inventory"));
+        ModelResourceLocation[] modelLocationArray = new ModelResourceLocation[MooncakeFilling.VALUES.length];
+        for (int i = 0; i < MooncakeFilling.VALUES.length; i++) {
+            modelLocationArray[i] = new ModelResourceLocation("mooncakecraft:mooncake_" + MooncakeFilling.getByOrdinal(i).getLocalizationKey(), "inventory");
+        }
+        ModelBakery.registerItemVariants(MooncakeConstants.MOONCAKE_ITEM, modelLocationArray);
+        ModelLoader.setCustomMeshDefinition(MooncakeConstants.MOONCAKE_ITEM, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_" + MooncakeFilling.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
     }
 }

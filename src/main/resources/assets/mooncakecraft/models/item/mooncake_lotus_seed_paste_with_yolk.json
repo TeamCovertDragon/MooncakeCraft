@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mooncakecraft:item/mooncake/lotus_seed_paste_with_yolk"
+  }
+}
