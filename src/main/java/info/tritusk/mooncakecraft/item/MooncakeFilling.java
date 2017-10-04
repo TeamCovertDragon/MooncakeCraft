@@ -21,6 +21,6 @@ public class MooncakeFilling extends Item {
     }
 
     public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + MooncakeFillingType.VALUES[stack.getMetadata()].localizationKey;
+        return super.getUnlocalizedName() + "." + MooncakeFillingType.VALUES[stack.getMetadata()].localizationKey;
     }
 }
