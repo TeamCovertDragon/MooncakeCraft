@@ -9,7 +9,7 @@
 package info.tritusk.mooncakecraft.client;
 
 import info.tritusk.mooncakecraft.MooncakeConstants;
-import info.tritusk.mooncakecraft.item.MooncakeFilling;
+import info.tritusk.mooncakecraft.item.MooncakeFillingType;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -22,12 +22,20 @@ public class MooncakeRegistriesClient {
 
     @SubscribeEvent
     public static void onModelRegistry(ModelRegistryEvent event) {
-        ModelResourceLocation[] modelLocationArray = new ModelResourceLocation[MooncakeFilling.VALUES.length];
-        for (int i = 0; i < MooncakeFilling.VALUES.length; i++) {
-            modelLocationArray[i] = new ModelResourceLocation("mooncakecraft:mooncake_" + MooncakeFilling.getByOrdinal(i).getLocalizationKey(), "inventory");
+        ModelResourceLocation[] modelLocationArray = new ModelResourceLocation[MooncakeFillingType.VALUES.length];
+        for (int i = 0; i < MooncakeFillingType.VALUES.length; i++) {
+            modelLocationArray[i] = new ModelResourceLocation("mooncakecraft:mooncake_" + MooncakeFillingType.getByOrdinal(i).getLocalizationKey(), "inventory");
         }
         ModelBakery.registerItemVariants(MooncakeConstants.MOONCAKE_ITEM, modelLocationArray);
-        ModelLoader.setCustomMeshDefinition(MooncakeConstants.MOONCAKE_ITEM, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_" + MooncakeFilling.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
+        ModelLoader.setCustomMeshDefinition(MooncakeConstants.MOONCAKE_ITEM, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_" + MooncakeFillingType.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
+
+        ModelResourceLocation[] modelLocationArray1 = new ModelResourceLocation[MooncakeFillingType.VALUES.length];
+        for (int i = 0; i < MooncakeFillingType.VALUES.length; i++) {
+            modelLocationArray[i] = new ModelResourceLocation("mooncakecraft:mooncake_filling_" + MooncakeFillingType.getByOrdinal(i).getLocalizationKey(), "inventory");
+        }
+        ModelBakery.registerItemVariants(MooncakeConstants.MOONCAKE_FILLING, modelLocationArray1);
+        ModelLoader.setCustomMeshDefinition(MooncakeConstants.MOONCAKE_FILLING, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_filling_" + MooncakeFillingType.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
+
 
         ModelLoader.setCustomModelResourceLocation(MooncakeConstants.WHEAT_FLOUR, 0, new ModelResourceLocation("mooncakecraft:wheat_flour", "inventory"));
     }

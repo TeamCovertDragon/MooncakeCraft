@@ -9,6 +9,7 @@
 package info.tritusk.mooncakecraft;
 
 import info.tritusk.mooncakecraft.item.Mooncake;
+import info.tritusk.mooncakecraft.item.MooncakeFilling;
 import info.tritusk.mooncakecraft.item.MooncakeMold;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -23,8 +24,11 @@ public class MooncakeRegistries {
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();
-        registry.register(new Mooncake().setRegistryName("mooncakecraft:mooncake"));
-        registry.register(new MooncakeMold().setRegistryName("mooncakecraft:mooncakemold"));
-        registry.register(new Item().setCreativeTab(CreativeTabs.MISC).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.wheat_flour").setRegistryName("mooncakecraft:wheat_flour"));
+        registry.registerAll(
+                new Mooncake().setRegistryName("mooncakecraft:mooncake"),
+                new MooncakeMold().setRegistryName("mooncakecraft:mooncakemold"),
+                new MooncakeFilling().setRegistryName("mooncakecraft:mooncake_filling"),
+                new Item().setCreativeTab(CreativeTabs.MISC).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.wheat_flour").setRegistryName("mooncakecraft:wheat_flour")
+        );
     }
 }
