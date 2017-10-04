@@ -8,8 +8,10 @@
 
 package info.tritusk.mooncakecraft.item;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 
 public class Mooncake extends ItemFood {
     public Mooncake() {
@@ -18,6 +20,7 @@ public class Mooncake extends ItemFood {
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
         this.setNoRepair();
+        this.setCreativeTab(CreativeTabs.FOOD);
     }
 
     @Override
@@ -33,5 +36,14 @@ public class Mooncake extends ItemFood {
     @Override
     public String getUnlocalizedName(ItemStack stack) {
         return "item.mooncakecraft.mooncake." + MooncakeFilling.VALUES[stack.getMetadata()].localizationKey;
+    }
+
+    @Override
+    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> stacks) {
+        if (this.isInCreativeTab(tab)) {
+            for (int meta = 0; meta < MooncakeFilling.VALUES.length; meta++) {
+                stacks.add(new ItemStack(this, 1, meta));
+            }
+        }
     }
 }

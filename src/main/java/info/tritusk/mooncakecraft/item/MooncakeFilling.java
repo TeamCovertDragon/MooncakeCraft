@@ -53,4 +53,8 @@ public enum MooncakeFilling {
         this.saturation = saturation;
         this.localizationKey = this.name().toLowerCase(Locale.ENGLISH);
     }
+
+    public String getLocalizationKey() {
+        return this.localizationKey;
+    }
 }
