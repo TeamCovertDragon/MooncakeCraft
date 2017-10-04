@@ -10,6 +10,7 @@ package info.tritusk.mooncakecraft;
 
 import info.tritusk.mooncakecraft.item.Mooncake;
 import info.tritusk.mooncakecraft.item.MooncakeMold;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -24,5 +25,6 @@ public class MooncakeRegistries {
         IForgeRegistry<Item> registry = event.getRegistry();
         registry.register(new Mooncake().setRegistryName("mooncakecraft:mooncake"));
         registry.register(new MooncakeMold().setRegistryName("mooncakecraft:mooncakemold"));
+        registry.register(new Item().setCreativeTab(CreativeTabs.MISC).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.wheat_flour").setRegistryName("mooncakecraft:wheat_flour"));
     }
 }

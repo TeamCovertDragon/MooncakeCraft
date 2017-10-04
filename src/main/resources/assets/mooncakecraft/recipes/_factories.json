@@ -1,0 +1,5 @@
+{
+  "recipes": {
+    "mooncake": "info.tritusk.mooncakecraft.recipe.MooncakeRecipe$Factory"
+  }
+}
