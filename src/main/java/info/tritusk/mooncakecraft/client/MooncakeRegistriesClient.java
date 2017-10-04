@@ -36,6 +36,20 @@ public class MooncakeRegistriesClient {
         ModelBakery.registerItemVariants(MooncakeConstants.MOONCAKE_FILLING, modelLocationArray1);
         ModelLoader.setCustomMeshDefinition(MooncakeConstants.MOONCAKE_FILLING, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_filling_" + MooncakeFillingType.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
 
+        ModelResourceLocation[] modelLocationArray2 = new ModelResourceLocation[MooncakeFillingType.VALUES.length];
+        for (int i = 0; i < MooncakeFillingType.VALUES.length; i++) {
+            modelLocationArray2[i] = new ModelResourceLocation("mooncakecraft:mooncake_raw_" + MooncakeFillingType.getByOrdinal(i).getLocalizationKey(), "inventory");
+        }
+        ModelBakery.registerItemVariants(MooncakeConstants.RAW_MOONCAKE_ITEM, modelLocationArray2);
+        ModelLoader.setCustomMeshDefinition(MooncakeConstants.RAW_MOONCAKE_ITEM, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_raw_" + MooncakeFillingType.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
+
+        ModelResourceLocation[] modelLocationArray3 = new ModelResourceLocation[MooncakeFillingType.VALUES.length];
+        for (int i = 0; i < MooncakeFillingType.VALUES.length; i++) {
+            modelLocationArray3[i] = new ModelResourceLocation("mooncakecraft:mooncake_unshaped_" + MooncakeFillingType.getByOrdinal(i).getLocalizationKey(), "inventory");
+        }
+        ModelBakery.registerItemVariants(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM, modelLocationArray3);
+        ModelLoader.setCustomMeshDefinition(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_unshaped_" + MooncakeFillingType.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
+
         ModelLoader.setCustomModelResourceLocation(MooncakeConstants.WHEAT_FLOUR, 0, new ModelResourceLocation("mooncakecraft:wheat_flour", "inventory"));
     }
 }

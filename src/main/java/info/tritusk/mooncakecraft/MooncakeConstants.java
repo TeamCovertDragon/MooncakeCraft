@@ -28,4 +28,10 @@ public class MooncakeConstants {
 
     @GameRegistry.ObjectHolder("mooncakecraft:wheat_flour")
     public static final Item WHEAT_FLOUR = null;
+
+    @GameRegistry.ObjectHolder("mooncakecraft:mooncakeraw")
+    public static final Item RAW_MOONCAKE_ITEM = null;
+
+    @GameRegistry.ObjectHolder("mooncakecraft:mooncakeunshaped")
+    public static final Item UNSHAPED_MOONCAKE_ITEM = null;
 }
