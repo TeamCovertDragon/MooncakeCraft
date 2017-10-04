@@ -1,0 +1,18 @@
+{
+  "group": "mooncakecraft:mooncakeunshaped",
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "mooncakecraft:mooncakeunshaped",
+    "data": 6,
+    "Count": 1
+  },
+  "ingredients": [
+    {
+      "item": "mooncakecraft:mooncake_filling",
+      "data": 6
+    },
+    {
+      "item": "mooncakecraft:wheat_flour"
+    }
+  ]
+}

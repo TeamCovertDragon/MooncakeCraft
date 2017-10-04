@@ -3,13 +3,12 @@
   "type": "minecraft:crafting_shapeless",
   "result": {
     "item": "mooncakecraft:mooncake_filling",
-    "data": 3,
+    "data": 5,
     "Count": 1
   },
   "ingredients": [
     {
-      "item": "minecraft:dye",
-      "data": 3
+      "item": "minecraft:egg"
     }
   ]
 }

@@ -21,7 +21,7 @@ public class MooncakeProxyClient extends MooncakeProxy {
 
     @Override
     public void init(FMLInitializationEvent event) {
-
+        super.init(event);
     }
 
     @Override
