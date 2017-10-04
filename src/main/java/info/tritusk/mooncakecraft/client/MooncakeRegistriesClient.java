@@ -28,5 +28,7 @@ public class MooncakeRegistriesClient {
         }
         ModelBakery.registerItemVariants(MooncakeConstants.MOONCAKE_ITEM, modelLocationArray);
         ModelLoader.setCustomMeshDefinition(MooncakeConstants.MOONCAKE_ITEM, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_" + MooncakeFilling.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
+
+        ModelLoader.setCustomModelResourceLocation(MooncakeConstants.WHEAT_FLOUR, 0, new ModelResourceLocation("mooncakecraft:wheat_flour", "inventory"));
     }
 }

@@ -22,4 +22,7 @@ public class MooncakeConstants {
 
     @GameRegistry.ObjectHolder("mooncakecraft:mooncakemold")
     public static final Item MOONCAKE_MOLD = null;
+
+    @GameRegistry.ObjectHolder("mooncakecraft:wheat_flour")
+    public static final Item WHEAT_FLOUR = null;
 }

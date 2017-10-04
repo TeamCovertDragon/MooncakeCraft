@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 public class MooncakeMold extends Item {
     public MooncakeMold() {
         setCreativeTab(CreativeTabs.TOOLS);
-        setUnlocalizedName("item.mooncakecraft.mooncakemold");
+        setUnlocalizedName("mooncakecraft.mooncakemold");
         setMaxStackSize(1);
     }
 
