@@ -11,10 +11,15 @@ package info.tritusk.mooncakecraft;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import org.apache.logging.log4j.Logger;
 
 public abstract class MooncakeProxy {
 
-    public abstract void preInit(FMLPreInitializationEvent event);
+    public Logger logger;
+
+    public void preInit(FMLPreInitializationEvent event) {
+        this.logger = event.getModLog();
+    }
 
     public abstract void init(FMLInitializationEvent event);
 

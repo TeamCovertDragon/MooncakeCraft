@@ -1,0 +1,21 @@
+{
+  "group": "mooncake_mold",
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "mooncakecraft:mooncakemold",
+    "Count": 1
+  },
+  "pattern": [
+    " P ",
+    "P P",
+    "SP "
+  ],
+  "key": {
+    "P": {
+      "item": "#plank_wood"
+    },
+    "S": {
+      "item": "#stick_wood"
+    }
+  }
+}

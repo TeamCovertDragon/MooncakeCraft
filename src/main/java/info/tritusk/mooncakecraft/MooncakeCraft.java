@@ -29,24 +29,24 @@ public final class MooncakeCraft {
     @SidedProxy(
             serverSide = "info.tritusk.mooncakecraft.server.MooncakeProxyServer",
             clientSide = "info.tritusk.mooncakecraft.client.MooncakeProxyClient")
-    public static MooncakeProxy delegate;
+    public static MooncakeProxy mooncakeSpecialist;
 
     private MooncakeCraft() {
         FluidRegistry.enableUniversalBucket(); // For future usage
     }
 
     @Mod.EventHandler
-    public void onPreInit(FMLPreInitializationEvent event) {
-        delegate.preInit(event);
+    public void preInit(FMLPreInitializationEvent event) {
+        mooncakeSpecialist.preInit(event);
     }
 
     @Mod.EventHandler
-    public void onInit(FMLInitializationEvent event) {
-        delegate.init(event);
+    public void init(FMLInitializationEvent event) {
+        mooncakeSpecialist.init(event);
     }
 
     @Mod.EventHandler
-    public void onPostInit(FMLPostInitializationEvent event) {
-        delegate.postInit(event);
+    public void postInit(FMLPostInitializationEvent event) {
+        mooncakeSpecialist.postInit(event);
     }
 }

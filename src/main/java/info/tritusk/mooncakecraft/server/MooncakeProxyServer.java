@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class MooncakeProxyServer extends MooncakeProxy {
     @Override
     public void preInit(FMLPreInitializationEvent event) {
-
+        super.preInit(event);
     }
 
     @Override

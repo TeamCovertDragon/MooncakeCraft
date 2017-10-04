@@ -1,0 +1,16 @@
+[
+  {
+    "name": "plank_wood",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "plankWood"
+    }
+  },
+  {
+    "name": "stick_wood",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    }
+  }
+]

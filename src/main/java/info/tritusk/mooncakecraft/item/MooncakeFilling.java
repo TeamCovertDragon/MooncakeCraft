@@ -12,6 +12,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class MooncakeFilling extends Item {
+
+    public MooncakeFilling() {
+        this.setHasSubtypes(true);
+        this.setMaxDamage(0);
+        this.setNoRepair();
+        this.setUnlocalizedName("mooncakecraft.filling");
+    }
+
     public String getUnlocalizedName(ItemStack stack) {
         return super.getUnlocalizedName() + MooncakeFillingType.VALUES[stack.getMetadata()].localizationKey;
     }
