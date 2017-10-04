@@ -55,6 +55,8 @@ public class MooncakeMold extends Item {
                 ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(MooncakeConstants.RAW_MOONCAKE_ITEM, 1, stack.getTagCompound().getInteger("meta")));
                 stack.setTagCompound(null);
             }
+            
+            return EnumActionResult.SUCCESS;
         }
 
         return EnumActionResult.PASS;
