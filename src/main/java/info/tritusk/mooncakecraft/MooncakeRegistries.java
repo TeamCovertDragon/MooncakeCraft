@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 3TUSK, Seraph-JACK, et al.
+ * Copyright (c) 2017 3TUSK, Seraph-JACK, yesterday17, et al.
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -25,7 +25,7 @@ public class MooncakeRegistries {
                 new Mooncake().setRegistryName("mooncakecraft:mooncake"),
                 new MooncakeMold().setRegistryName("mooncakecraft:mooncakemold"),
                 new MooncakeFilling().setRegistryName("mooncakecraft:mooncake_filling"),
-                new Item().setCreativeTab(MooncakeConstants.tabMooncakeCraft).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.wheat_flour").setRegistryName("mooncakecraft:wheat_flour"),
+                new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.wheat_flour").setRegistryName("mooncakecraft:wheat_flour"),
                 new MoonCakeRaw().setRegistryName("mooncakecraft:mooncakeraw"),
                 new MoonCakeUnshaped().setRegistryName("mooncakecraft:mooncakeunshaped")
         );

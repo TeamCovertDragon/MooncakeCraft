@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 3TUSK, Seraph-JACK, et al.
+ * Copyright (c) 2017 3TUSK, Seraph-JACK, yesterday17, et al.
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -20,7 +20,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-@Mod.EventBusSubscriber(modid = MooncakeConstants.MODID)
+@Mod.EventBusSubscriber(modid = MooncakeConstants.MODID, value = Side.CLIENT)
 public class MooncakeRegistriesClient {
 
     @SubscribeEvent

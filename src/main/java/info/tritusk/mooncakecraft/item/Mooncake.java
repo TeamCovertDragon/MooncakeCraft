@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 3TUSK, Seraph-JACK, et al.
+ * Copyright (c) 2017 3TUSK, Seraph-JACK, yesterday17, et al.
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -21,7 +21,7 @@ public class Mooncake extends ItemFood {
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
         this.setNoRepair();
-        this.setCreativeTab(MooncakeConstants.tabMooncakeCraft);
+        this.setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT);
     }
 
     @Override

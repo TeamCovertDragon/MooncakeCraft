@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 3TUSK, Seraph-JACK, et al.
+ * Copyright (c) 2017 3TUSK, Seraph-JACK, yesterday17, et al.
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -28,7 +28,7 @@ public abstract class MooncakeProxy {
         for (int i = 0; i < MooncakeFillingType.VALUES.length; i++) {
             GameRegistry.addSmelting(new ItemStack(MooncakeConstants.RAW_MOONCAKE_ITEM, 1, i), new ItemStack(MooncakeConstants.MOONCAKE_ITEM, 1, i), 1.0f);
         }
-    };
+    }
 
     public abstract void postInit(FMLPostInitializationEvent event);
 }
