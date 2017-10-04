@@ -52,7 +52,7 @@ public class MooncakeMold extends Item {
             stack.getTagCompound().setInteger("hitCount", stack.getTagCompound().getInteger("hitCount") + 1);
 
             if (stack.getTagCompound().getInteger("hitCount") >= 5) {
-                ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(MooncakeConstants.MOONCAKE_ITEM, 1, stack.getTagCompound().getInteger("meta")));
+                ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(MooncakeConstants.RAW_MOONCAKE_ITEM, 1, stack.getTagCompound().getInteger("meta")));
                 stack.setTagCompound(null);
             }
         }
