@@ -13,10 +13,10 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
-public class MooncakeMod extends Item {
-    public MooncakeMod() {
+public class MooncakeMold extends Item {
+    public MooncakeMold() {
         setCreativeTab(CreativeTabs.TOOLS);
-        setUnlocalizedName("item.mooncakecraft.mooncakemod");
+        setUnlocalizedName("item.mooncakecraft.mooncakemold");
         setMaxStackSize(1);
     }
 
@@ -24,7 +24,7 @@ public class MooncakeMod extends Item {
     @Nonnull
     public EnumActionResult onItemUse(EntityPlayer player, World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         ItemStack stack = player.getHeldItem(hand);
-        if (!(stack.getItem() instanceof MooncakeMod))
+        if (!(stack.getItem() instanceof MooncakeMold))
             return EnumActionResult.PASS;
 
         if (!stack.hasTagCompound())
