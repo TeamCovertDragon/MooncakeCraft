@@ -9,3 +9,27 @@ item.mooncakecraft.mooncake.invalid.name=坏掉的月饼...
 item.mooncakecraft.wheat_flour.name=面粉
 
 item.mooncakecraft.mooncakemold.name=月饼模子
+
+item.mooncakecraft.mooncakeraw.lotus_seed_paste_with_yolk.name=未烘焙的月饼（蛋黄莲蓉馅）
+item.mooncakecraft.mooncakeraw.lotus_seed_paste.name=未烘焙的月饼（莲蓉馅）
+item.mooncakecraft.mooncakeraw.sweet_bean_paste.name=未烘焙的月饼（豆沙馅）
+item.mooncakecraft.mooncakeraw.lotus_seed_paste_with_double_yolk.name=未烘焙的月饼（双黄莲蓉馅）
+item.mooncakecraft.mooncakeraw.jujube_paste.name=未烘焙的月饼（枣泥馅）
+item.mooncakecraft.mooncakeraw.five_nuts.name=未烘焙的月饼（五仁馅）
+item.mooncakecraft.mooncakeraw.invalid.name=坏掉的生月饼...
+
+item.mooncakecraft.mooncakeunshaped.lotus_seed_paste_with_yolk.name=未成形的月饼（蛋黄莲蓉馅）
+item.mooncakecraft.mooncakeunshaped.lotus_seed_paste.name=未成形的月饼（莲蓉馅）
+item.mooncakecraft.mooncakeunshaped.sweet_bean_paste.name=未成形的月饼（豆沙馅）
+item.mooncakecraft.mooncakeunshaped.lotus_seed_paste_with_double_yolk.name=未成形的月饼（双黄莲蓉馅）
+item.mooncakecraft.mooncakeunshaped.jujube_paste.name=未成形的月饼（枣泥馅）
+item.mooncakecraft.mooncakeunshaped.five_nuts.name=未成形的月饼（五仁馅）
+item.mooncakecraft.mooncakeunshaped.invalid.name=坏掉的未成形的月饼...
+
+item.mooncakecraft.filling.lotus_seed_paste_with_yolk.name=蛋黄莲蓉馅
+item.mooncakecraft.filling.lotus_seed_paste.name=莲蓉馅
+item.mooncakecraft.filling.sweet_bean_paste.name=豆沙馅
+item.mooncakecraft.filling.lotus_seed_paste_with_double_yolk.name=双黄莲蓉馅
+item.mooncakecraft.filling.jujube_paste.name=枣泥馅
+item.mooncakecraft.filling.five_nuts.name=五仁馅
+item.mooncakecraft.filling.invalid.name=坏掉的月饼馅...

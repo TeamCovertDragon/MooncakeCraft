@@ -25,3 +25,11 @@ item.mooncakecraft.mooncakeunshaped.lotus_seed_paste_with_double_yolk.name=Unsha
 item.mooncakecraft.mooncakeunshaped.jujube_paste.name=Unshaped Mooncake (Jujube Paste)
 item.mooncakecraft.mooncakeunshaped.five_nuts.name=Unshaped Mooncake (Five Nuts)
 item.mooncakecraft.mooncakeunshaped.invalid.name=Oh no this unshaped mooncake is bad
+
+item.mooncakecraft.filling.lotus_seed_paste_with_yolk.name=Lotus Seed Paste w/ Yolk
+item.mooncakecraft.filling.lotus_seed_paste.name=Lotus Seed Paste
+item.mooncakecraft.filling.sweet_bean_paste.name=Sweet Bean Paste
+item.mooncakecraft.filling.lotus_seed_paste_with_double_yolk.name=Lotus Seed Paste w/ Double Yolk
+item.mooncakecraft.filling.jujube_paste.name=Jujube Paste
+item.mooncakecraft.filling.five_nuts.name=Five Nuts
+item.mooncakecraft.filling.invalid.name=Oh no this filling is bad
