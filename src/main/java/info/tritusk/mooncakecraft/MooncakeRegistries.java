@@ -8,9 +8,7 @@
 
 package info.tritusk.mooncakecraft;
 
-import info.tritusk.mooncakecraft.item.Mooncake;
-import info.tritusk.mooncakecraft.item.MooncakeFilling;
-import info.tritusk.mooncakecraft.item.MooncakeMold;
+import info.tritusk.mooncakecraft.item.*;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -28,7 +26,9 @@ public class MooncakeRegistries {
                 new Mooncake().setRegistryName("mooncakecraft:mooncake"),
                 new MooncakeMold().setRegistryName("mooncakecraft:mooncakemold"),
                 new MooncakeFilling().setRegistryName("mooncakecraft:mooncake_filling"),
-                new Item().setCreativeTab(CreativeTabs.MISC).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.wheat_flour").setRegistryName("mooncakecraft:wheat_flour")
+                new Item().setCreativeTab(CreativeTabs.MISC).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.wheat_flour").setRegistryName("mooncakecraft:wheat_flour"),
+                new MoonCakeRaw().setRegistryName("mooncakecraft:mooncakeraw"),
+                new MoonCakeUnshaped().setRegistryName("mooncakecraft:mooncakeunshaped")
         );
     }
 }

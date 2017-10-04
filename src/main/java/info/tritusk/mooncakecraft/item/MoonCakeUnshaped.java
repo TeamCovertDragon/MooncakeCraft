@@ -8,9 +8,31 @@
 
 package info.tritusk.mooncakecraft.item;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 
 public class MoonCakeUnshaped extends Item {
 
-    //TODO similar design as Mooncake
+    public MoonCakeUnshaped() {
+        this.setHasSubtypes(true);
+        this.setMaxDamage(0);
+        this.setNoRepair();
+        this.setCreativeTab(CreativeTabs.FOOD);
+    }
+
+    @Override
+    public String getUnlocalizedName(ItemStack stack) {
+        return "item.mooncakecraft.mooncakeunshaped." + MooncakeFillingType.getByOrdinal(stack.getMetadata()).localizationKey;
+    }
+
+    @Override
+    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> stacks) {
+        if (this.isInCreativeTab(tab)) {
+            for (int meta = 0; meta < MooncakeFillingType.VALUES.length; meta++) {
+                stacks.add(new ItemStack(this, 1, meta));
+            }
+        }
+    }
 }
