@@ -1,0 +1,13 @@
+{
+  "group": "mooncake_mold",
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "mooncakecraft:wheat_flour",
+    "Count": 1
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    }
+  ]
+}

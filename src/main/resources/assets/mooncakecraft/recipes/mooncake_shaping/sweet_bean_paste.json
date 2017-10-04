@@ -1,0 +1,18 @@
+{
+  "group": "mooncakecraft:mooncake_shaping",
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "mooncakecraft:mooncakemold",
+    "Count": 1,
+    "nbt": "{meta:2}"
+  },
+  "ingredients": [
+    {
+      "item": "mooncakecraft:mooncakeunshaped",
+      "data": 2
+    },
+    {
+      "item": "mooncakecraft:mooncakemold"
+    }
+  ]
+}
