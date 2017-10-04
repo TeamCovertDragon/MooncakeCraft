@@ -12,5 +12,12 @@
       "type": "forge:ore_dict",
       "ore": "stickWood"
     }
+  },
+  {
+    "name": "wheat",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "wheat"
+    }
   }
 ]
