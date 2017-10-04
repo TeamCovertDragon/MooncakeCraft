@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import javax.annotation.Nonnull;
 
-@Mod(modid = "mooncakecraft", name = "MooncakeCraft", version = "@VERSION@", useMetadata = true)
+@Mod(modid = MooncakeConstants.MODID, name = MooncakeConstants.NAME, version = "@VERSION@", useMetadata = true)
 public final class MooncakeCraft {
 
     @Mod.InstanceFactory

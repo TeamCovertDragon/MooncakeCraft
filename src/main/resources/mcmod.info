@@ -1,0 +1,15 @@
+[
+  {
+    "modid": "mooncakecraft",
+    "name": "MooncakeCraft",
+    "description": "Mooncake! Yay!",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url" : "",
+    "updateUrl": "",
+    "authorList": ["3TUSK", "Seraph-JACK"],
+    "credits": "Those who suggest mooncake fillings and crusts!",
+    "logoFile": "logo.png",
+    "screenshots": []
+  }
+]
