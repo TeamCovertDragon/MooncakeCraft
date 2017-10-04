@@ -9,7 +9,9 @@
 package info.tritusk.mooncakecraft;
 
 import info.tritusk.mooncakecraft.item.*;
+import info.tritusk.mooncakecraft.recipe.RecipeAddFilling;
 import net.minecraft.item.Item;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -29,5 +31,11 @@ public class MooncakeRegistries {
                 new MoonCakeRaw().setRegistryName("mooncakecraft:mooncakeraw"),
                 new MoonCakeUnshaped().setRegistryName("mooncakecraft:mooncakeunshaped")
         );
+    }
+
+    @SubscribeEvent
+    public static void onRecipeRegister(RegistryEvent.Register<IRecipe> event) {
+        IForgeRegistry<IRecipe> registry = event.getRegistry();
+        registry.registerAll(new RecipeAddFilling());
     }
 }
