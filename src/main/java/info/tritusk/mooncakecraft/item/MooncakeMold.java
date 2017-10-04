@@ -18,6 +18,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.items.ItemHandlerHelper;
 
 import javax.annotation.Nonnull;
 
@@ -44,7 +45,7 @@ public class MooncakeMold extends Item {
             stack.getTagCompound().setInteger("hitCount", stack.getTagCompound().getInteger("hitCount") + 1);
 
             if (stack.getTagCompound().getInteger("hitCount") >= 5) {
-                //TODO: Give Mooncake
+                ItemHandlerHelper.giveItemToPlayer(player,new ItemStack(MooncakeConstants.MOONCAKE_ITEM,1,stack.getTagCompound().getInteger("meta")));
                 stack.setTagCompound(null);
             }
         }
