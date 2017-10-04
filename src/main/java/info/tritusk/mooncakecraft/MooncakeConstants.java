@@ -8,7 +8,9 @@
 
 package info.tritusk.mooncakecraft;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MooncakeConstants {
@@ -16,6 +18,13 @@ public class MooncakeConstants {
     public static final String MODID = "mooncakecraft";
 
     public static final String NAME = "MooncakeCraft";
+
+    public static final CreativeTabs tabMooncakeCraft = new CreativeTabs(MODID) {
+        @Override
+        public ItemStack getTabIconItem() {
+            return new ItemStack(MOONCAKE_MOLD);
+        }
+    };
 
     @GameRegistry.ObjectHolder("mooncakecraft:mooncake")
     public static final Item MOONCAKE_ITEM = null;

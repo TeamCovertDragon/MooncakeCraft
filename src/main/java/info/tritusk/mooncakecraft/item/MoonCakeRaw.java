@@ -8,6 +8,7 @@
 
 package info.tritusk.mooncakecraft.item;
 
+import info.tritusk.mooncakecraft.MooncakeConstants;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -19,7 +20,7 @@ public class MoonCakeRaw extends Item {
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
         this.setNoRepair();
-        this.setCreativeTab(CreativeTabs.FOOD);
+        this.setCreativeTab(MooncakeConstants.tabMooncakeCraft);
     }
 
     @Override

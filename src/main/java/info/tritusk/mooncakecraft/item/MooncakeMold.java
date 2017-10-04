@@ -8,7 +8,7 @@
 
 package info.tritusk.mooncakecraft.item;
 
-import net.minecraft.creativetab.CreativeTabs;
+import info.tritusk.mooncakecraft.MooncakeConstants;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -23,7 +23,7 @@ import javax.annotation.Nonnull;
 
 public class MooncakeMold extends Item {
     public MooncakeMold() {
-        setCreativeTab(CreativeTabs.TOOLS);
+        setCreativeTab(MooncakeConstants.tabMooncakeCraft);
         setUnlocalizedName("mooncakecraft.mooncakemold");
         setMaxStackSize(1);
     }
