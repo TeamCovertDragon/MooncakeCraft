@@ -9,6 +9,7 @@
 package info.tritusk.mooncakecraft.item;
 
 import info.tritusk.mooncakecraft.MooncakeConstants;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -18,9 +19,13 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class MooncakeMold extends Item {
     public MooncakeMold() {
@@ -55,10 +60,18 @@ public class MooncakeMold extends Item {
                 ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(MooncakeConstants.RAW_MOONCAKE_ITEM, 1, stack.getTagCompound().getInteger("meta")));
                 stack.setTagCompound(null);
             }
-            
+
             return EnumActionResult.SUCCESS;
         }
 
         return EnumActionResult.PASS;
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+        if (stack.hasTagCompound()) {
+            tooltip.add(new ItemStack(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM, 1, stack.getTagCompound().getInteger("meta")).getDisplayName());
+        }
     }
 }
