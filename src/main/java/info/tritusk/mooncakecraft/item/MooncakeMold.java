@@ -30,6 +30,13 @@ public class MooncakeMold extends Item {
     }
 
     @Override
+    public int getMetadata(ItemStack stack) {
+        if (stack.hasTagCompound())
+            return 1;
+        return 0;
+    }
+
+    @Override
     @Nonnull
     public EnumActionResult onItemUse(EntityPlayer player, World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         ItemStack stack = player.getHeldItem(hand);
@@ -45,7 +52,7 @@ public class MooncakeMold extends Item {
             stack.getTagCompound().setInteger("hitCount", stack.getTagCompound().getInteger("hitCount") + 1);
 
             if (stack.getTagCompound().getInteger("hitCount") >= 5) {
-                ItemHandlerHelper.giveItemToPlayer(player,new ItemStack(MooncakeConstants.MOONCAKE_ITEM,1,stack.getTagCompound().getInteger("meta")));
+                ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(MooncakeConstants.MOONCAKE_ITEM, 1, stack.getTagCompound().getInteger("meta")));
                 stack.setTagCompound(null);
             }
         }
