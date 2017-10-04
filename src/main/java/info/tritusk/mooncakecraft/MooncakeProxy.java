@@ -8,9 +8,12 @@
 
 package info.tritusk.mooncakecraft;
 
+import info.tritusk.mooncakecraft.item.MooncakeFillingType;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.Logger;
 
 public abstract class MooncakeProxy {
@@ -21,7 +24,11 @@ public abstract class MooncakeProxy {
         this.logger = event.getModLog();
     }
 
-    public abstract void init(FMLInitializationEvent event);
+    public void init(FMLInitializationEvent event){
+        for (int i = 0; i < MooncakeFillingType.VALUES.length; i++) {
+            GameRegistry.addSmelting(new ItemStack(MooncakeConstants.RAW_MOONCAKE_ITEM, 1, i), new ItemStack(MooncakeConstants.MOONCAKE_ITEM, 1, i), 1.0f);
+        }
+    };
 
     public abstract void postInit(FMLPostInitializationEvent event);
 }
