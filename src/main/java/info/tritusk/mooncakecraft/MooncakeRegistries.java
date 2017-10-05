@@ -15,6 +15,7 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSeeds;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -48,6 +49,16 @@ public class MooncakeRegistries {
                 new ItemSeeds(MooncakeConstants.SESAME_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.sesame_seeds").setRegistryName("mooncakecraft:sesame_seeds"),
                 new Item().setRegistryName("mooncakecraft:icon")
         );
+    }
+
+    @SubscribeEvent
+    public static void onBlockMissing(RegistryEvent.MissingMappings<Block> event) {
+        for (RegistryEvent.MissingMappings.Mapping<Block> mapping : event.getAllMappings()) {
+            if (new ResourceLocation(MooncakeConstants.MODID, "jujube_plant").equals(mapping.key)) {
+                mapping.remap(Blocks.WHEAT);
+                break;
+            }
+        }
     }
 
 }
