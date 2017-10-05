@@ -8,15 +8,30 @@
 
 package info.tritusk.mooncakecraft;
 
+import info.tritusk.mooncakecraft.block.PlantPeanut;
+import info.tritusk.mooncakecraft.block.PlantSesame;
 import info.tritusk.mooncakecraft.item.*;
+import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemSeeds;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.IForgeRegistryEntry;
 
 @Mod.EventBusSubscriber(modid = MooncakeConstants.MODID)
 public class MooncakeRegistries {
+
+    @SubscribeEvent
+    public static void onBlockRegister(RegistryEvent.Register<Block> event) {
+        IForgeRegistry<Block> registry = event.getRegistry();
+        registry.registerAll(
+                new PlantPeanut().setRegistryName("mooncakecraft:peanut_plant"),
+                new PlantSesame().setRegistryName("mooncakecraft:sesame_plant")
+        );
+    }
 
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {
@@ -27,7 +42,9 @@ public class MooncakeRegistries {
                 new MooncakeFilling().setRegistryName("mooncakecraft:mooncake_filling"),
                 new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.wheat_flour").setRegistryName("mooncakecraft:wheat_flour"),
                 new MoonCakeRaw().setRegistryName("mooncakecraft:mooncakeraw"),
-                new MoonCakeUnshaped().setRegistryName("mooncakecraft:mooncakeunshaped")
+                new MoonCakeUnshaped().setRegistryName("mooncakecraft:mooncakeunshaped"),
+                new ItemSeeds(MooncakeConstants.PEANUT_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.peanut_seed").setRegistryName("mooncakecraft:peanut_seed"),
+                new ItemSeeds(MooncakeConstants.SESAME_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.sesame_seed").setRegistryName("mooncakecraft:sesame_seed")
         );
     }
 

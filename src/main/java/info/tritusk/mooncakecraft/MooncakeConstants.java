@@ -8,6 +8,7 @@
 
 package info.tritusk.mooncakecraft;
 
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -26,6 +27,12 @@ public class MooncakeConstants {
         }
     };
 
+    @GameRegistry.ObjectHolder("mooncakecraft:peanut_plant")
+    public static final Block PEANUT_PLANT = null;
+
+    @GameRegistry.ObjectHolder("mooncakecraft:sesame_plant")
+    public static final Block SESAME_PLANT = null;
+
     @GameRegistry.ObjectHolder("mooncakecraft:mooncake")
     public static final Item MOONCAKE_ITEM = null;
 
@@ -43,4 +50,11 @@ public class MooncakeConstants {
 
     @GameRegistry.ObjectHolder("mooncakecraft:mooncakeunshaped")
     public static final Item UNSHAPED_MOONCAKE_ITEM = null;
+
+    @GameRegistry.ObjectHolder("mooncakecraft:peanut_seed")
+    public static final Item PEANUT_SEED = null;
+
+    @GameRegistry.ObjectHolder("mooncakecraft:sesame_seed")
+    public static final Item SESAME_SEED = null;
+
 }
