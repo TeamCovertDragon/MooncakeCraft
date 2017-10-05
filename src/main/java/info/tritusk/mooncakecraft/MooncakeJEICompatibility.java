@@ -23,5 +23,6 @@ public class MooncakeJEICompatibility implements IModPlugin {
         blacklist.addIngredientToBlacklist(new ItemStack(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM, 1, 0));
         blacklist.addIngredientToBlacklist(new ItemStack(MooncakeConstants.RAW_MOONCAKE_ITEM, 1, 0));
         blacklist.addIngredientToBlacklist(new ItemStack(MooncakeConstants.MOONCAKE_ITEM, 1, 0));
+        blacklist.addIngredientToBlacklist(new ItemStack(MooncakeConstants.ICON, 1, 0));
     }
 }

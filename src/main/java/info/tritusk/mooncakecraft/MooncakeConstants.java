@@ -23,7 +23,7 @@ public class MooncakeConstants {
     public static final CreativeTabs TAB_MOONCAKE_CRAFT = new CreativeTabs(MODID) {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(MOONCAKE_MOLD);
+            return new ItemStack(ICON);
         }
     };
 
@@ -63,4 +63,6 @@ public class MooncakeConstants {
     @GameRegistry.ObjectHolder("mooncakecraft:sesame_seeds")
     public static final Item SESAME_SEED = null;
 
+    @GameRegistry.ObjectHolder("mooncakecraft:icon")
+    public static final Item ICON = null;
 }

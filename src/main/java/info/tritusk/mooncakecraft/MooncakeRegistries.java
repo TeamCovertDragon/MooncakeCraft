@@ -45,7 +45,8 @@ public class MooncakeRegistries {
                 new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.lotus_seeds").setRegistryName("mooncakecraft:lotus_seeds"),
                 new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.jujube").setRegistryName("mooncakecraft:jujube"),
                 new ItemSeeds(MooncakeConstants.PEANUT_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.peanut_seeds").setRegistryName("mooncakecraft:peanut_seeds"),
-                new ItemSeeds(MooncakeConstants.SESAME_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.sesame_seeds").setRegistryName("mooncakecraft:sesame_seeds")
+                new ItemSeeds(MooncakeConstants.SESAME_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.sesame_seeds").setRegistryName("mooncakecraft:sesame_seeds"),
+                new Item().setRegistryName("mooncakecraft:icon")
         );
     }
 

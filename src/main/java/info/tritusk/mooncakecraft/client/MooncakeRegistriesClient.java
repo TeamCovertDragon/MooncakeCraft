@@ -61,5 +61,7 @@ public class MooncakeRegistriesClient {
 
         ModelLoader.setCustomModelResourceLocation(MooncakeConstants.MOONCAKE_MOLD, 0, new ModelResourceLocation("mooncakecraft:mooncake_mold_empty", "inventory"));
         ModelLoader.setCustomModelResourceLocation(MooncakeConstants.MOONCAKE_MOLD, 1, new ModelResourceLocation("mooncakecraft:mooncake_mold_full", "inventory"));
+
+        ModelLoader.setCustomModelResourceLocation(MooncakeConstants.ICON, 0, new ModelResourceLocation("mooncakecraft:icon", "inventory"));
     }
 }
