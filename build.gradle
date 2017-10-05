@@ -37,9 +37,7 @@ minecraft {
 }
 
 dependencies {
-//    provided "mezz.jei:jei_1.12.2:4.8.0.103:api"
-
-    runtime "mezz.jei:jei_1.12.2:4.8.0.103"
+    compile "mezz.jei:jei_1.12.2:4.8.0.103"
 }
 
 processResources {
