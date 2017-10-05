@@ -57,6 +57,9 @@ public class MooncakeConstants {
     @GameRegistry.ObjectHolder("mooncakecraft:jujube")
     public static final Item JUJUBE = null;
 
+    @GameRegistry.ObjectHolder("mooncakecraft:lotus_seed")
+    public static final Item LOTUS_SEED = null;
+
     @GameRegistry.ObjectHolder("mooncakecraft:peanut_seed")
     public static final Item PEANUT_SEED = null;
 
