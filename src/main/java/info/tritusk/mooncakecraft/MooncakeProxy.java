@@ -25,11 +25,10 @@ public abstract class MooncakeProxy {
         this.logger = event.getModLog();
     }
 
-    public void init(FMLInitializationEvent event){
+    public void init(FMLInitializationEvent event) {
         for (int i = 0; i < MooncakeFillingType.VALUES.length; i++) {
             GameRegistry.addSmelting(new ItemStack(MooncakeConstants.RAW_MOONCAKE_ITEM, 1, i), new ItemStack(MooncakeConstants.MOONCAKE_ITEM, 1, i), 1.0f);
         }
-        MinecraftForge.addGrassSeed(new ItemStack(MooncakeConstants.JUJUBE), 10);
         MinecraftForge.addGrassSeed(new ItemStack(MooncakeConstants.SESAME_SEED), 10);
         MinecraftForge.addGrassSeed(new ItemStack(MooncakeConstants.PEANUT_SEED), 10);
     }

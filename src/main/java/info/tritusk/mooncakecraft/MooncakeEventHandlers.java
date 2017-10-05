@@ -8,6 +8,7 @@
 
 package info.tritusk.mooncakecraft;
 
+import net.minecraft.block.BlockPlanks;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent;
@@ -20,9 +21,14 @@ public class MooncakeEventHandlers {
     @SubscribeEvent
     public static void gatherDrop(BlockEvent.HarvestDropsEvent event) {
         if (event.getHarvester() != null
-                && event.getState().getBlock() == Blocks.WATERLILY
-                && event.getHarvester().getRNG().nextInt(100) < 5) {
-            event.getDrops().add(new ItemStack(MooncakeConstants.LOTUS_SEED, 2));
+                && event.getHarvester().getRNG().nextInt(100) < 15) {
+            //Drop lotus seeds
+            if (event.getState().getBlock() == Blocks.WATERLILY)
+                event.getDrops().add(new ItemStack(MooncakeConstants.LOTUS_SEED, 1));
+
+            //Drop jujubes
+            if (event.getState().getBlock() == Blocks.LEAVES && event.getState().getProperties().containsValue(BlockPlanks.EnumType.SPRUCE))
+                event.getDrops().add(new ItemStack(MooncakeConstants.JUJUBE, 1));
         }
     }
 }

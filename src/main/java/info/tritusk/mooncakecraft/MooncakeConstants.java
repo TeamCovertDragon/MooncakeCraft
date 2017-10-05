@@ -27,9 +27,6 @@ public class MooncakeConstants {
         }
     };
 
-    @GameRegistry.ObjectHolder("mooncakecraft:jujube_plant")
-    public static final Block JUJUBE_PLANT = null;
-
     @GameRegistry.ObjectHolder("mooncakecraft:peanut_plant")
     public static final Block PEANUT_PLANT = null;
 
