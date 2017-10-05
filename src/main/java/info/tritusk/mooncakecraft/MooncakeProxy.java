@@ -10,6 +10,7 @@ package info.tritusk.mooncakecraft;
 
 import info.tritusk.mooncakecraft.item.MooncakeFillingType;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -28,6 +29,9 @@ public abstract class MooncakeProxy {
         for (int i = 0; i < MooncakeFillingType.VALUES.length; i++) {
             GameRegistry.addSmelting(new ItemStack(MooncakeConstants.RAW_MOONCAKE_ITEM, 1, i), new ItemStack(MooncakeConstants.MOONCAKE_ITEM, 1, i), 1.0f);
         }
+        MinecraftForge.addGrassSeed(new ItemStack(MooncakeConstants.JUJUBE), 10);
+        MinecraftForge.addGrassSeed(new ItemStack(MooncakeConstants.SESAME_SEED), 10);
+        MinecraftForge.addGrassSeed(new ItemStack(MooncakeConstants.PEANUT_SEED), 10);
     }
 
     public abstract void postInit(FMLPostInitializationEvent event);
