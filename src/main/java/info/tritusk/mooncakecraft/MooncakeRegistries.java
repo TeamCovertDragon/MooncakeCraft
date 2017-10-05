@@ -46,9 +46,9 @@ public class MooncakeRegistries {
                 new MoonCakeRaw().setRegistryName("mooncakecraft:mooncakeraw"),
                 new MoonCakeUnshaped().setRegistryName("mooncakecraft:mooncakeunshaped"),
                 new ItemSeeds(MooncakeConstants.JUJUBE_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.jujube").setRegistryName("mooncakecraft:jujube"),
-                new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.lotus_seed").setRegistryName("mooncakecraft:lotus_seed"),
-                new ItemSeeds(MooncakeConstants.PEANUT_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.peanut_seed").setRegistryName("mooncakecraft:peanut_seed"),
-                new ItemSeeds(MooncakeConstants.SESAME_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.sesame_seed").setRegistryName("mooncakecraft:sesame_seed")
+                new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.lotus_seeds").setRegistryName("mooncakecraft:lotus_seeds"),
+                new ItemSeeds(MooncakeConstants.PEANUT_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.peanut_seeds").setRegistryName("mooncakecraft:peanut_seeds"),
+                new ItemSeeds(MooncakeConstants.SESAME_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.sesame_seeds").setRegistryName("mooncakecraft:sesame_seeds")
         );
     }
 

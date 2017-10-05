@@ -8,8 +8,10 @@
   },
   "ingredients": [
     {
-      "item": "minecraft:dye",
-      "data": 3
+      "item": "mooncakecraft:jujube"
+    },
+    {
+      "item": "minecraft:sugar"
     }
   ]
 }

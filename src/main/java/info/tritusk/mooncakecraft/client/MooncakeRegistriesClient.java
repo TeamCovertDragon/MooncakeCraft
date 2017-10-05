@@ -54,9 +54,9 @@ public class MooncakeRegistriesClient {
         ModelLoader.setCustomMeshDefinition(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_unshaped_" + MooncakeFillingType.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
 
         ModelLoader.setCustomModelResourceLocation(MooncakeConstants.WHEAT_FLOUR, 0, new ModelResourceLocation("mooncakecraft:wheat_flour", "inventory"));
-        ModelLoader.setCustomModelResourceLocation(MooncakeConstants.SESAME_SEED, 0, new ModelResourceLocation("mooncakecraft:sesame_seed", "inventory"));
-        ModelLoader.setCustomModelResourceLocation(MooncakeConstants.PEANUT_SEED, 0, new ModelResourceLocation("mooncakecraft:peanut_seed", "inventory"));
-        ModelLoader.setCustomModelResourceLocation(MooncakeConstants.LOTUS_SEED, 0, new ModelResourceLocation("mooncakecraft:lotus_seed", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(MooncakeConstants.SESAME_SEED, 0, new ModelResourceLocation("mooncakecraft:sesame_seeds", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(MooncakeConstants.PEANUT_SEED, 0, new ModelResourceLocation("mooncakecraft:peanut_seeds", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(MooncakeConstants.LOTUS_SEED, 0, new ModelResourceLocation("mooncakecraft:lotus_seeds", "inventory"));
         ModelLoader.setCustomModelResourceLocation(MooncakeConstants.JUJUBE, 0, new ModelResourceLocation("mooncakecraft:jujube", "inventory"));
 
         ModelLoader.setCustomModelResourceLocation(MooncakeConstants.MOONCAKE_MOLD, 0, new ModelResourceLocation("mooncakecraft:mooncake_mold_empty", "inventory"));

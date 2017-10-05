@@ -8,8 +8,19 @@
   },
   "ingredients": [
     {
-      "item": "minecraft:dye",
-      "data": 3
+      "item": "minecraft:melon_seeds"
+    },
+    {
+      "item": "minecraft:pumpkin_seeds"
+    },
+    {
+      "item": "mooncakecraft:sesame_seeds"
+    },
+    {
+      "item": "mooncakecraft:peanut_seeds"
+    },
+    {
+      "item": "minecraft:seeds"
     }
   ]
 }
