@@ -20,7 +20,6 @@ public class MoonCakeUnshaped extends Item {
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
         this.setNoRepair();
-        this.setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT);
         this.setUnlocalizedName("item.mooncakecraft.mooncakeunshaped"); // Dumb check
     }
 
@@ -31,8 +30,8 @@ public class MoonCakeUnshaped extends Item {
 
     @Override
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> stacks) {
-        if (this.isInCreativeTab(tab)) {
-            for (int meta = 0; meta < MooncakeFillingType.VALUES.length; meta++) {
+        if (tab == MooncakeConstants.TAB_MOONCAKE_CRAFT) {
+            for (int meta = 1; meta < MooncakeFillingType.VALUES.length; meta++) {
                 stacks.add(new ItemStack(this, 1, meta));
             }
         }

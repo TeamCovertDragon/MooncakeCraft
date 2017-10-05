@@ -36,9 +36,7 @@ public class MooncakeMold extends Item {
 
     @Override
     public int getMetadata(ItemStack stack) {
-        if (stack.hasTagCompound())
-            return 1;
-        return 0;
+        return stack.hasTagCompound() ? 1 : 0;
     }
 
     @Override

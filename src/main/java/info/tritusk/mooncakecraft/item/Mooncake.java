@@ -21,7 +21,6 @@ public class Mooncake extends ItemFood {
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
         this.setNoRepair();
-        this.setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT);
     }
 
     @Override
@@ -41,8 +40,8 @@ public class Mooncake extends ItemFood {
 
     @Override
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> stacks) {
-        if (this.isInCreativeTab(tab)) {
-            for (int meta = 0; meta < MooncakeFillingType.VALUES.length; meta++) {
+        if (tab == MooncakeConstants.TAB_MOONCAKE_CRAFT) {
+            for (int meta = 1; meta < MooncakeFillingType.VALUES.length; meta++) {
                 stacks.add(new ItemStack(this, 1, meta));
             }
         }
