@@ -54,6 +54,8 @@ public class MooncakeRegistriesClient {
         ModelLoader.setCustomMeshDefinition(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_unshaped_" + MooncakeFillingType.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
 
         ModelLoader.setCustomModelResourceLocation(MooncakeConstants.WHEAT_FLOUR, 0, new ModelResourceLocation("mooncakecraft:wheat_flour", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(MooncakeConstants.SESAME_SEED, 0, new ModelResourceLocation("mooncakecraft:sesame_seed", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(MooncakeConstants.PEANUT_SEED, 0, new ModelResourceLocation("mooncakecraft:peanut_seed", "inventory"));
 
         ModelLoader.setCustomModelResourceLocation(MooncakeConstants.MOONCAKE_MOLD, 0, new ModelResourceLocation("mooncakecraft:mooncake_mold_empty", "inventory"));
         ModelLoader.setCustomModelResourceLocation(MooncakeConstants.MOONCAKE_MOLD, 1, new ModelResourceLocation("mooncakecraft:mooncake_mold_full", "inventory"));

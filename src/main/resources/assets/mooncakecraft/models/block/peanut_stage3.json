@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "mooncakecraft:block/peanut_stage_3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0": { "model": "mooncakecraft:peanut_stage0" },
+    "age=1": { "model": "mooncakecraft:peanut_stage1" },
+    "age=2": { "model": "mooncakecraft:peanut_stage2" },
+    "age=3": { "model": "mooncakecraft:peanut_stage3" },
+    "age=4": { "model": "mooncakecraft:peanut_stage4" },
+    "age=5": { "model": "mooncakecraft:peanut_stage5" },
+    "age=6": { "model": "mooncakecraft:peanut_stage6" },
+    "age=7": { "model": "mooncakecraft:peanut_stage7" }
+  }
+}

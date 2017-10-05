@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0": { "model": "mooncakecraft:sesame_stage0" },
+    "age=1": { "model": "mooncakecraft:sesame_stage1" },
+    "age=2": { "model": "mooncakecraft:sesame_stage2" },
+    "age=3": { "model": "mooncakecraft:sesame_stage3" },
+    "age=4": { "model": "mooncakecraft:sesame_stage4" },
+    "age=5": { "model": "mooncakecraft:sesame_stage5" },
+    "age=6": { "model": "mooncakecraft:sesame_stage6" },
+    "age=7": { "model": "mooncakecraft:sesame_stage7" }
+  }
+}

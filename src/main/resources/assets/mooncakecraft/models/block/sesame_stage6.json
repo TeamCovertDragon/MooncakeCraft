@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "mooncakecraft:block/sesame_stage_6"
+  }
+}
