@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "mooncakecraft:block/jujube_stage_1"
+  }
+}

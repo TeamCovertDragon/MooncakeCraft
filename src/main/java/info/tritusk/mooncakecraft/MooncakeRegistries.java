@@ -8,6 +8,7 @@
 
 package info.tritusk.mooncakecraft;
 
+import info.tritusk.mooncakecraft.block.PlantJujube;
 import info.tritusk.mooncakecraft.block.PlantPeanut;
 import info.tritusk.mooncakecraft.block.PlantSesame;
 import info.tritusk.mooncakecraft.item.*;
@@ -28,6 +29,7 @@ public class MooncakeRegistries {
     public static void onBlockRegister(RegistryEvent.Register<Block> event) {
         IForgeRegistry<Block> registry = event.getRegistry();
         registry.registerAll(
+                new PlantJujube().setRegistryName("mooncakecraft:jujube_plant"),
                 new PlantPeanut().setRegistryName("mooncakecraft:peanut_plant"),
                 new PlantSesame().setRegistryName("mooncakecraft:sesame_plant")
         );
@@ -43,6 +45,7 @@ public class MooncakeRegistries {
                 new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.wheat_flour").setRegistryName("mooncakecraft:wheat_flour"),
                 new MoonCakeRaw().setRegistryName("mooncakecraft:mooncakeraw"),
                 new MoonCakeUnshaped().setRegistryName("mooncakecraft:mooncakeunshaped"),
+                new ItemSeeds(MooncakeConstants.JUJUBE_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.jujube").setRegistryName("mooncakecraft:jujube"),
                 new ItemSeeds(MooncakeConstants.PEANUT_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.peanut_seed").setRegistryName("mooncakecraft:peanut_seed"),
                 new ItemSeeds(MooncakeConstants.SESAME_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.sesame_seed").setRegistryName("mooncakecraft:sesame_seed")
         );

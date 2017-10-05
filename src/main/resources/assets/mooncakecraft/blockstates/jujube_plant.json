@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0": { "model": "mooncakecraft:jujube_stage0" },
+    "age=1": { "model": "mooncakecraft:jujube_stage1" },
+    "age=2": { "model": "mooncakecraft:jujube_stage2" },
+    "age=3": { "model": "mooncakecraft:jujube_stage3" },
+    "age=4": { "model": "mooncakecraft:jujube_stage4" },
+    "age=5": { "model": "mooncakecraft:jujube_stage5" },
+    "age=6": { "model": "mooncakecraft:jujube_stage6" },
+    "age=7": { "model": "mooncakecraft:jujube_stage7" }
+  }
+}

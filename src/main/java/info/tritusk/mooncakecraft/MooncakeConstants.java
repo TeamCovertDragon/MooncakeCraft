@@ -27,6 +27,9 @@ public class MooncakeConstants {
         }
     };
 
+    @GameRegistry.ObjectHolder("mooncakecraft:jujube_plant")
+    public static final Block JUJUBE_PLANT = null;
+
     @GameRegistry.ObjectHolder("mooncakecraft:peanut_plant")
     public static final Block PEANUT_PLANT = null;
 
@@ -50,6 +53,9 @@ public class MooncakeConstants {
 
     @GameRegistry.ObjectHolder("mooncakecraft:mooncakeunshaped")
     public static final Item UNSHAPED_MOONCAKE_ITEM = null;
+
+    @GameRegistry.ObjectHolder("mooncakecraft:jujube")
+    public static final Item JUJUBE = null;
 
     @GameRegistry.ObjectHolder("mooncakecraft:peanut_seed")
     public static final Item PEANUT_SEED = null;
