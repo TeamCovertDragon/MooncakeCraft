@@ -1,0 +1,19 @@
+{
+  "group": "mooncakecraft:mooncake_filling",
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "mooncakecraft:mooncake_filling",
+    "data": 2,
+    "Count": 1
+  },
+  "_comment": "We haven't implemented red bean (adzuki bean) yet, so we use cocoa bean for placeholder",
+  "ingredients": [
+    {
+      "item": "minecraft:dye",
+      "data": 3
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ]
+}
