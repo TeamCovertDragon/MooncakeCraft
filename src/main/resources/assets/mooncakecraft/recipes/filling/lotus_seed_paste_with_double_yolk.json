@@ -3,15 +3,15 @@
   "type": "minecraft:crafting_shapeless",
   "result": {
     "item": "mooncakecraft:mooncake_filling",
-    "data": 5,
+    "data": 6,
     "Count": 1
   },
   "ingredients": [
     {
-      "item": "mooncakecraft:lotus_seed"
+      "item": "mooncakecraft:lotus_seeds"
     },
     {
-      "item": "minecraft:water_bottle"
+      "item": "#water_bottle"
     },
     {
       "item": "minecraft:sugar"

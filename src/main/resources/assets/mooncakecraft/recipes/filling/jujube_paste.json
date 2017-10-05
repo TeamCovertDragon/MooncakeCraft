@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "result": {
     "item": "mooncakecraft:mooncake_filling",
-    "data": 4,
+    "data": 3,
     "Count": 1
   },
   "ingredients": [

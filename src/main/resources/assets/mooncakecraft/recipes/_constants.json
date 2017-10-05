@@ -19,5 +19,15 @@
       "type": "forge:ore_dict",
       "ore": "wheat"
     }
+  },
+  {
+    "name": "water_bottle",
+    "ingredient": {
+      "type": "minecraft:item_nbt",
+      "item": "minecraft:potion",
+      "Count": 1,
+      "data": 0,
+      "nbt": "{Potion:\"minecraft:water\"}"
+    }
   }
 ]

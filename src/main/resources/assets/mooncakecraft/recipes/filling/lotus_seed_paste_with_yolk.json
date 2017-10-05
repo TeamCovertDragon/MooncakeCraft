@@ -8,10 +8,10 @@
   },
   "ingredients": [
     {
-      "item": "mooncakecraft:lotus_seed"
+      "item": "mooncakecraft:lotus_seeds"
     },
     {
-      "item": "minecraft:water_bottle"
+      "item": "#water_bottle"
     },
     {
       "item": "minecraft:sugar"
