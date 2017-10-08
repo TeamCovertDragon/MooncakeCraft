@@ -14,13 +14,11 @@ import net.minecraft.item.Item;
 
 public class PlantPeanut extends BlockCrops {
 
-    protected Item getSeed()
-    {
+    protected Item getSeed() {
         return MooncakeConstants.PEANUT_SEED;
     }
 
-    protected Item getCrop()
-    {
+    protected Item getCrop() {
         return MooncakeConstants.PEANUT_SEED;
     }
 }

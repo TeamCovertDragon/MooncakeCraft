@@ -14,13 +14,11 @@ import net.minecraft.item.Item;
 
 public class PlantSesame extends BlockCrops {
 
-    protected Item getSeed()
-    {
+    protected Item getSeed() {
         return MooncakeConstants.SESAME_SEED;
     }
 
-    protected Item getCrop()
-    {
+    protected Item getCrop() {
         return MooncakeConstants.SESAME_SEED;
     }
 }
