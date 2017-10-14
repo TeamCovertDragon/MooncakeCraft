@@ -1,6 +1,6 @@
 {
   "group": "mooncakecraft:mooncake_filling",
-  "type": "minecraft:crafting_shapeless",
+  "type": "mooncakecraft:remain_bottle",
   "result": {
     "item": "mooncakecraft:mooncake_filling",
     "data": 1,
