@@ -33,6 +33,11 @@ public class MooncakeJEICompatibility implements IModPlugin {
 
     @Override
     public void register(IModRegistry registry) {
+        //init water bottle
+        NBTTagCompound tag = new NBTTagCompound();
+        tag.setString("Potion", "minecraft:water");
+        waterBottle.setTagCompound(tag);
+
         IIngredientBlacklist blacklist = registry.getJeiHelpers().getIngredientBlacklist();
         blacklist.addIngredientToBlacklist(new ItemStack(MooncakeConstants.MOONCAKE_FILLING, 1, 0));
         blacklist.addIngredientToBlacklist(new ItemStack(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM, 1, 0));
@@ -41,10 +46,6 @@ public class MooncakeJEICompatibility implements IModPlugin {
         blacklist.addIngredientToBlacklist(new ItemStack(MooncakeConstants.ICON, 1, 0));
 
         registerCustomRecipe(registry);
-
-        NBTTagCompound tag = new NBTTagCompound();
-        tag.setString("Potion", "minecraft:water");
-        waterBottle.setTagCompound(tag);
     }
 
     private void registerCustomRecipe(IModRegistry registry) {
