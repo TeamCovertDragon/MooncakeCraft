@@ -20,7 +20,9 @@ import net.minecraftforge.common.crafting.IRecipeFactory;
 import net.minecraftforge.common.crafting.JsonContext;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
-public class RemainBottleRecipeFactory implements IRecipeFactory{
+import javax.annotation.Nonnull;
+
+public class RemainBottleRecipeFactory implements IRecipeFactory {
 
     @Override
     public IRecipe parse(JsonContext context, JsonObject json) {
@@ -30,20 +32,19 @@ public class RemainBottleRecipeFactory implements IRecipeFactory{
     }
 
     public static class RemainBottleRecipe extends ShapelessRecipes {
-        public RemainBottleRecipe(String group, ItemStack output, NonNullList<Ingredient> ingredients) {
+        RemainBottleRecipe(String group, ItemStack output, NonNullList<Ingredient> ingredients) {
             super(group, output, ingredients);
         }
 
+        @Nonnull
         @Override
-        public NonNullList<ItemStack> getRemainingItems(InventoryCrafting inv)
-        {
-            NonNullList<ItemStack> nonnulllist = NonNullList.<ItemStack>withSize(inv.getSizeInventory(), ItemStack.EMPTY);
+        public NonNullList<ItemStack> getRemainingItems(InventoryCrafting inv) {
+            NonNullList<ItemStack> nonnulllist = NonNullList.withSize(inv.getSizeInventory(), ItemStack.EMPTY);
 
-            for (int i = 0; i < nonnulllist.size(); ++i)
-            {
+            for (int i = 0; i < nonnulllist.size(); ++i) {
                 ItemStack itemstack = inv.getStackInSlot(i);
 
-                if(itemstack.isItemEqual(new ItemStack(Items.POTIONITEM))) {
+                if (itemstack.isItemEqual(new ItemStack(Items.POTIONITEM))) {
                     nonnulllist.set(i, new ItemStack(Items.GLASS_BOTTLE, 1));
                     continue;
                 }
