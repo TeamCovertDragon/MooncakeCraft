@@ -27,8 +27,8 @@ public final class MooncakeCraft {
 
     @Nonnull
     @SidedProxy(
-            serverSide = "info.tritusk.mooncakecraft.server.MooncakeProxyServer",
-            clientSide = "info.tritusk.mooncakecraft.client.MooncakeProxyClient")
+            serverSide = "team.covertdragon.mooncakecraft.server.MooncakeProxyServer",
+            clientSide = "team.covertdragon.mooncakecraft.client.MooncakeProxyClient")
     public static MooncakeProxy mooncakeSpecialist;
 
     private MooncakeCraft() {

@@ -1,5 +1,5 @@
 {
   "recipes": {
-    "remain_bottle": "info.tritusk.mooncakecraft.crafting.RemainBottleRecipeFactory"
+    "remain_bottle": "team.covertdragon.mooncakecraft.crafting.RemainBottleRecipeFactory"
   }
 }
