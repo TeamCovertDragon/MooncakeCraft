@@ -6,7 +6,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package info.tritusk.mooncakecraft.item;
+package team.covertdragon.mooncakecraft.item;
 
 import java.util.Locale;
 

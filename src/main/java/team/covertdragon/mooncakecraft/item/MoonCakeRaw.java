@@ -6,21 +6,26 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package info.tritusk.mooncakecraft.item;
+package team.covertdragon.mooncakecraft.item;
 
-import info.tritusk.mooncakecraft.MooncakeConstants;
+import team.covertdragon.mooncakecraft.MooncakeConstants;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 
-public class MooncakeFilling extends Item {
+public class MoonCakeRaw extends Item {
 
-    public MooncakeFilling() {
+    public MoonCakeRaw() {
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
         this.setNoRepair();
-        this.setUnlocalizedName("mooncakecraft.filling");
+        this.setUnlocalizedName("item.mooncakecraft.mooncakeraw"); // Dumb check
+    }
+
+    @Override
+    public String getUnlocalizedName(ItemStack stack) {
+        return "item.mooncakecraft.mooncakeraw." + MooncakeFillingType.getByOrdinal(stack.getMetadata()).localizationKey;
     }
 
     @Override
@@ -30,10 +35,5 @@ public class MooncakeFilling extends Item {
                 stacks.add(new ItemStack(this, 1, meta));
             }
         }
-    }
-
-    @Override
-    public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "." + MooncakeFillingType.VALUES[stack.getMetadata()].localizationKey;
     }
 }

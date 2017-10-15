@@ -6,19 +6,19 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package info.tritusk.mooncakecraft.block;
+package team.covertdragon.mooncakecraft.block;
 
-import info.tritusk.mooncakecraft.MooncakeConstants;
+import team.covertdragon.mooncakecraft.MooncakeConstants;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
 
-public class PlantPeanut extends BlockCrops {
+public class PlantSesame extends BlockCrops {
 
     protected Item getSeed() {
-        return MooncakeConstants.PEANUT_SEED;
+        return MooncakeConstants.SESAME_SEED;
     }
 
     protected Item getCrop() {
-        return MooncakeConstants.PEANUT_SEED;
+        return MooncakeConstants.SESAME_SEED;
     }
 }

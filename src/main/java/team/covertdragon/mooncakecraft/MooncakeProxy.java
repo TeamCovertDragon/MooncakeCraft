@@ -6,9 +6,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package info.tritusk.mooncakecraft;
+package team.covertdragon.mooncakecraft;
 
-import info.tritusk.mooncakecraft.item.MooncakeFillingType;
+import team.covertdragon.mooncakecraft.item.MooncakeFillingType;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

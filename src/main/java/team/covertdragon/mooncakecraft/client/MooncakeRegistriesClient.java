@@ -6,10 +6,10 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package info.tritusk.mooncakecraft.client;
+package team.covertdragon.mooncakecraft.client;
 
-import info.tritusk.mooncakecraft.MooncakeConstants;
-import info.tritusk.mooncakecraft.item.MooncakeFillingType;
+import team.covertdragon.mooncakecraft.MooncakeConstants;
+import team.covertdragon.mooncakecraft.item.MooncakeFillingType;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;

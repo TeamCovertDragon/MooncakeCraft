@@ -6,7 +6,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package info.tritusk.mooncakecraft;
+package team.covertdragon.mooncakecraft;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;

@@ -6,11 +6,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package info.tritusk.mooncakecraft;
+package team.covertdragon.mooncakecraft;
 
-import info.tritusk.mooncakecraft.block.PlantPeanut;
-import info.tritusk.mooncakecraft.block.PlantSesame;
-import info.tritusk.mooncakecraft.item.*;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -20,6 +17,9 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
+import team.covertdragon.mooncakecraft.block.PlantPeanut;
+import team.covertdragon.mooncakecraft.block.PlantSesame;
+import team.covertdragon.mooncakecraft.item.*;
 
 @Mod.EventBusSubscriber(modid = MooncakeConstants.MODID)
 public class MooncakeRegistries {

@@ -6,9 +6,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package info.tritusk.mooncakecraft.item;
+package team.covertdragon.mooncakecraft.item;
 
-import info.tritusk.mooncakecraft.MooncakeConstants;
+import team.covertdragon.mooncakecraft.MooncakeConstants;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;

@@ -6,7 +6,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package info.tritusk.mooncakecraft.crafting;
+package team.covertdragon.mooncakecraft.crafting;
 
 import com.google.gson.JsonObject;
 import net.minecraft.init.Items;

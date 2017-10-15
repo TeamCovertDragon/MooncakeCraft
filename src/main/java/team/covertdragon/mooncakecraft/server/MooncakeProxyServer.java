@@ -6,9 +6,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package info.tritusk.mooncakecraft.server;
+package team.covertdragon.mooncakecraft.server;
 
-import info.tritusk.mooncakecraft.MooncakeProxy;
+import team.covertdragon.mooncakecraft.MooncakeProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
