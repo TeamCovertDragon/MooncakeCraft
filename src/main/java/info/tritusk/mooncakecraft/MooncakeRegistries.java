@@ -11,12 +11,10 @@ package info.tritusk.mooncakecraft;
 import info.tritusk.mooncakecraft.block.PlantPeanut;
 import info.tritusk.mooncakecraft.block.PlantSesame;
 import info.tritusk.mooncakecraft.item.*;
-import info.tritusk.mooncakecraft.recipe.RecipeUnshapedMooncake;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSeeds;
-import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -61,12 +59,5 @@ public class MooncakeRegistries {
                 break;
             }
         }
-    }
-
-    @SubscribeEvent
-    public static void onRecipeRegister(RegistryEvent.Register<IRecipe> event) {
-        event.getRegistry().registerAll(
-                new RecipeUnshapedMooncake()
-        );
     }
 }

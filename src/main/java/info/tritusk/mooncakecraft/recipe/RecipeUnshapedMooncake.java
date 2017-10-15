@@ -14,6 +14,7 @@ import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemPotion;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 
@@ -76,8 +77,23 @@ public class RecipeUnshapedMooncake extends net.minecraftforge.registries.IForge
 
     @Override
     public NonNullList<ItemStack> getRemainingItems(InventoryCrafting inv) {
-        NonNullList<ItemStack> list = net.minecraftforge.common.ForgeHooks.defaultRecipeGetRemainingItems(inv);
+        NonNullList<ItemStack> list = NonNullList.withSize(inv.getSizeInventory(), ItemStack.EMPTY);
         list.set(bucketSlot, new ItemStack(Items.GLASS_BOTTLE, 1));
         return list;
+    }
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        NonNullList<Ingredient> list = NonNullList.create();
+        list.add(new IngredientUnshapedMooncake());
+        return list;
+    }
+
+    private static class IngredientUnshapedMooncake extends Ingredient {
+        IngredientUnshapedMooncake() {
+            super(new ItemStack(MooncakeConstants.MOONCAKE_FILLING, 1, 1),
+                    new ItemStack(MooncakeConstants.WHEAT_FLOUR, 1, 1),
+                    new ItemStack(Items.POTIONITEM));
+        }
     }
 }

@@ -1,0 +1,21 @@
+{
+  "group": "mooncakecraft:mooncakeunshaped",
+  "type": "mooncakecraft:remain_bottle",
+  "result": {
+    "item": "mooncakecraft:mooncakeunshaped",
+    "data": 2,
+    "Count": 1
+  },
+  "ingredients": [
+    {
+      "item": "mooncakecraft:mooncake_filling",
+      "data": 2
+    },
+    {
+      "item": "mooncakecraft:wheat_flour"
+    },
+    {
+      "item": "#water_bottle"
+    }
+  ]
+}
