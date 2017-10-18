@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mooncakecraft:item/mooncake/invalid"
+    "layer0": "minecraft:items/snowball"
   }
 }
