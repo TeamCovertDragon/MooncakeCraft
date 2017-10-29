@@ -14,6 +14,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 
+import javax.annotation.Nonnull;
+
 public class MoonCakeRaw extends Item {
 
     public MoonCakeRaw() {
@@ -23,6 +25,7 @@ public class MoonCakeRaw extends Item {
         this.setUnlocalizedName("item.mooncakecraft.mooncakeraw"); // Dumb check
     }
 
+    @Nonnull
     @Override
     public String getUnlocalizedName(ItemStack stack) {
         return "item.mooncakecraft.mooncakeraw." + MooncakeFillingType.getByOrdinal(stack.getMetadata()).localizationKey;

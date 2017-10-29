@@ -14,6 +14,8 @@ import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 
+import javax.annotation.Nonnull;
+
 public class Mooncake extends ItemFood {
     public Mooncake() {
         // Default constructor represents "this food gives 2 shank hunger, 2.0 saturation, and it is not food for wolf"
@@ -33,13 +35,14 @@ public class Mooncake extends ItemFood {
         return MooncakeFillingType.getByOrdinal(stack.getMetadata()).saturation;
     }
 
+    @Nonnull
     @Override
     public String getUnlocalizedName(ItemStack stack) {
         return "item.mooncakecraft.mooncake." + MooncakeFillingType.getByOrdinal(stack.getMetadata()).localizationKey;
     }
 
     @Override
-    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> stacks) {
+    public void getSubItems(@Nonnull CreativeTabs tab, @Nonnull NonNullList<ItemStack> stacks) {
         if (tab == MooncakeConstants.TAB_MOONCAKE_CRAFT) {
             for (int meta = 1; meta < MooncakeFillingType.VALUES.length; meta++) {
                 stacks.add(new ItemStack(this, 1, meta));
