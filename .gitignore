@@ -1,1 +1,14 @@
 Thumbs.db
+/run
+/out
+/gradle
+/eclipse
+/build
+/.gradle
+gradlew
+gradlew.bat
+gradle.properties
+*.iml
+*.ipr
+*.iws
+*.iml
