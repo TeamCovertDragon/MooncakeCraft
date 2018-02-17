@@ -57,7 +57,5 @@ public abstract class MooncakeProxy {
         OreDictionary.registerOre("sugar", Items.SUGAR);
     }
 
-    public void postInit(FMLPostInitializationEvent event) {
-    	
-    };
+    public abstract void postInit(FMLPostInitializationEvent event);
 }
