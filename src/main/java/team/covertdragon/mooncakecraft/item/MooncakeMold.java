@@ -15,11 +15,13 @@ import javax.annotation.Nullable;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -54,6 +56,8 @@ public class MooncakeMold extends Item {
         for (int id : OreDictionary.getOreIDs(new ItemStack(world.getBlockState(pos).getBlock())))
         {
         	if (target == id) {
+        		world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.BLOCK_METAL_HIT, SoundCategory.BLOCKS, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+        		world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.BLOCK_WOOD_HIT, SoundCategory.BLOCKS, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
                 if (!stack.getTagCompound().hasKey("hitCount"))
                     stack.getTagCompound().setInteger("hitCount", 0);
                 stack.getTagCompound().setInteger("hitCount", stack.getTagCompound().getInteger("hitCount") + 1);
