@@ -8,10 +8,13 @@
 
 package team.covertdragon.mooncakecraft.item;
 
-import team.covertdragon.mooncakecraft.MooncakeConstants;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
@@ -22,10 +25,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.ItemHandlerHelper;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.List;
+import net.minecraftforge.oredict.OreDictionary;
+import team.covertdragon.mooncakecraft.MooncakeConstants;
 
 public class MooncakeMold extends Item {
     public MooncakeMold() {
@@ -49,17 +50,21 @@ public class MooncakeMold extends Item {
         if (!stack.hasTagCompound())
             return EnumActionResult.PASS;
 
-        if (world.getBlockState(pos).getBlock() == Blocks.IRON_BLOCK) {
-            if (!stack.getTagCompound().hasKey("hitCount"))
-                stack.getTagCompound().setInteger("hitCount", 0);
-            stack.getTagCompound().setInteger("hitCount", stack.getTagCompound().getInteger("hitCount") + 1);
+        int target = OreDictionary.getOreID("blockIron");
+        for (int id : OreDictionary.getOreIDs(new ItemStack(world.getBlockState(pos).getBlock())))
+        {
+        	if (target == id) {
+                if (!stack.getTagCompound().hasKey("hitCount"))
+                    stack.getTagCompound().setInteger("hitCount", 0);
+                stack.getTagCompound().setInteger("hitCount", stack.getTagCompound().getInteger("hitCount") + 1);
 
-            if (stack.getTagCompound().getInteger("hitCount") >= 5) {
-                ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(MooncakeConstants.RAW_MOONCAKE_ITEM, 1, stack.getTagCompound().getInteger("meta")));
-                stack.setTagCompound(null);
+                if (stack.getTagCompound().getInteger("hitCount") >= 5) {
+                    ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(MooncakeConstants.RAW_MOONCAKE_ITEM, 1, stack.getTagCompound().getInteger("meta")));
+                    stack.setTagCompound(null);
+                }
+
+                return EnumActionResult.SUCCESS;
             }
-
-            return EnumActionResult.SUCCESS;
         }
 
         return EnumActionResult.PASS;

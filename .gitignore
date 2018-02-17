@@ -5,6 +5,9 @@ Thumbs.db
 /eclipse
 /build
 /.gradle
+/libs
+/bin
+/.settings
 gradlew
 gradlew.bat
 gradle.properties
@@ -12,3 +15,6 @@ gradle.properties
 *.ipr
 *.iws
 *.iml
+*.launch
+.project
+.classpath

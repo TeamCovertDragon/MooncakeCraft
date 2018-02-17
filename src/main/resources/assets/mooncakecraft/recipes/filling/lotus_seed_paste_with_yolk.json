@@ -8,13 +8,13 @@
   },
   "ingredients": [
     {
-      "item": "mooncakecraft:lotus_seeds"
+      "item": "#lotus_seeds"
     },
     {
-      "item": "minecraft:sugar"
+      "item": "#sugar"
     },
     {
-      "item": "minecraft:egg"
+      "item": "#egg"
     }
   ]
 }
