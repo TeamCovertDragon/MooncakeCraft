@@ -20,6 +20,10 @@ version = "1.2.0"
 group = "info.tritusk"
 archivesBaseName = "MooncakeCraft"
 
+if (System.getenv().BUILD_NUMBER != null) {
+    version += "-build${System.getenv().BUILD_NUMBER}"
+}
+
 repositories {
     maven {
         name "jei"
