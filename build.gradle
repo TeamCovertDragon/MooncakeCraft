@@ -17,7 +17,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
 
 version = "1.2.0"
-group = "info.tritusk"
+group = "team.covertdragon"
 archivesBaseName = "MooncakeCraft"
 
 repositories {
@@ -25,19 +25,27 @@ repositories {
         name "jei"
         url "http://dvs1.progwml6.com/files/maven"
     }
+    maven {
+        name = "jared"
+        url = "http://maven.blamejared.com"
+    }
 }
 
 minecraft {
-    version = "1.12.2-14.23.0.2501"
+    version = "1.12.2-14.23.4.2750"
     runDir = "run"
 
-    mappings = "snapshot_20171003"
+    mappings = "stable_39"
     
     replace "@VERSION@", project.version
 }
 
 dependencies {
-    compile "mezz.jei:jei_1.12.2:4.8.0.103"
+    compile "mezz.jei:jei_1.12.2:4.12.0.215"
+
+    deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.9.6"
+    deobfCompile "CraftTweaker2:CraftTweaker2-API:4.1.9.6"
+    deobfCompile "CraftTweaker2:ZenScript:4.1.9.6"
 }
 
 processResources {
