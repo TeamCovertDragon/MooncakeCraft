@@ -12,12 +12,16 @@ import team.covertdragon.mooncakecraft.MooncakeConstants;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
 
+import javax.annotation.Nonnull;
+
 public class PlantPeanut extends BlockCrops {
 
+    @Nonnull
     protected Item getSeed() {
         return MooncakeConstants.PEANUT_SEED;
     }
 
+    @Nonnull
     protected Item getCrop() {
         return MooncakeConstants.PEANUT_SEED;
     }

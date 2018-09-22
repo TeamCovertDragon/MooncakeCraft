@@ -29,5 +29,54 @@
       "data": 0,
       "nbt": "{Potion:\"minecraft:water\"}"
     }
+  },
+  {
+    "name": "lotus_seeds",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "seedLotus"
+    }
+  },
+  {
+    "name": "sesame",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "cropSesame"
+    }
+  },
+  {
+    "name": "peanut",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "cropPeanut"
+    }
+  },
+  {
+    "name": "jujube",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "cropJujube"
+    }
+  },
+  {
+    "name": "sugar",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "sugar"
+    }
+  },
+  {
+    "name": "flour",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "foodFlour"
+    }
+  },
+  {
+    "name": "egg",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "egg"
+    }
   }
 ]

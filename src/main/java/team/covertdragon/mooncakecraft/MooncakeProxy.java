@@ -8,14 +8,17 @@
 
 package team.covertdragon.mooncakecraft;
 
-import team.covertdragon.mooncakecraft.item.MooncakeFillingType;
+import org.apache.logging.log4j.Logger;
+
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import org.apache.logging.log4j.Logger;
+import net.minecraftforge.oredict.OreDictionary;
+import team.covertdragon.mooncakecraft.item.MooncakeFillingType;
 
 public abstract class MooncakeProxy {
 
@@ -31,6 +34,27 @@ public abstract class MooncakeProxy {
         }
         MinecraftForge.addGrassSeed(new ItemStack(MooncakeConstants.SESAME_SEED), 10);
         MinecraftForge.addGrassSeed(new ItemStack(MooncakeConstants.PEANUT_SEED), 10);
+        
+        OreDictionary.registerOre("foodMooncake", MooncakeConstants.MOONCAKE_ITEM);
+        
+        OreDictionary.registerOre("cropSesame", MooncakeConstants.SESAME_SEED);
+        OreDictionary.registerOre("seedSesame", MooncakeConstants.SESAME_SEED);
+        OreDictionary.registerOre("listAllseed", MooncakeConstants.SESAME_SEED);
+        
+        OreDictionary.registerOre("cropPeanut", MooncakeConstants.PEANUT_SEED);
+        OreDictionary.registerOre("seedPeanut", MooncakeConstants.PEANUT_SEED);
+        OreDictionary.registerOre("listAllnut", MooncakeConstants.PEANUT_SEED);
+        OreDictionary.registerOre("listAllseed", MooncakeConstants.PEANUT_SEED);
+        
+        OreDictionary.registerOre("seedLotus", MooncakeConstants.LOTUS_SEED);
+        OreDictionary.registerOre("listAllseed", MooncakeConstants.LOTUS_SEED);
+        
+        OreDictionary.registerOre("cropJujube", MooncakeConstants.JUJUBE);
+        OreDictionary.registerOre("listAllfruit", MooncakeConstants.JUJUBE);
+        
+        OreDictionary.registerOre("foodFlour", MooncakeConstants.WHEAT_FLOUR);
+        
+        OreDictionary.registerOre("sugar", Items.SUGAR);
     }
 
     public abstract void postInit(FMLPostInitializationEvent event);
