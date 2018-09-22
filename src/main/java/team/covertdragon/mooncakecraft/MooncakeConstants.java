@@ -22,7 +22,7 @@ public class MooncakeConstants {
 
     public static final CreativeTabs TAB_MOONCAKE_CRAFT = new CreativeTabs(MODID) {
         @Override
-        public ItemStack getTabIconItem() {
+        public ItemStack createIcon() {
             return new ItemStack(ICON);
         }
     };

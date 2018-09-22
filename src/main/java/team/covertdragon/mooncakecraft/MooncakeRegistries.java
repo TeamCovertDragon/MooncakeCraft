@@ -45,13 +45,13 @@ public class MooncakeRegistries {
                 new Mooncake().setRegistryName("mooncakecraft:mooncake"),
                 new MooncakeMold().setRegistryName("mooncakecraft:mooncakemold"),
                 new MooncakeFilling().setRegistryName("mooncakecraft:mooncake_filling"),
-                new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.wheat_flour").setRegistryName("mooncakecraft:wheat_flour"),
+                new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setTranslationKey("mooncakecraft.wheat_flour").setRegistryName("mooncakecraft:wheat_flour"),
                 new MoonCakeRaw().setRegistryName("mooncakecraft:mooncakeraw"),
                 new MoonCakeUnshaped().setRegistryName("mooncakecraft:mooncakeunshaped"),
-                new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.lotus_seeds").setRegistryName("mooncakecraft:lotus_seeds"),
-                new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setUnlocalizedName("mooncakecraft.jujube").setRegistryName("mooncakecraft:jujube"),
-                new ItemSeeds(MooncakeConstants.PEANUT_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.peanut_seeds").setRegistryName("mooncakecraft:peanut_seeds"),
-                new ItemSeeds(MooncakeConstants.SESAME_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setUnlocalizedName("mooncakecraft.sesame_seeds").setRegistryName("mooncakecraft:sesame_seeds"),
+                new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setTranslationKey("mooncakecraft.lotus_seeds").setRegistryName("mooncakecraft:lotus_seeds"),
+                new Item().setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setHasSubtypes(false).setTranslationKey("mooncakecraft.jujube").setRegistryName("mooncakecraft:jujube"),
+                new ItemSeeds(MooncakeConstants.PEANUT_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setTranslationKey("mooncakecraft.peanut_seeds").setRegistryName("mooncakecraft:peanut_seeds"),
+                new ItemSeeds(MooncakeConstants.SESAME_PLANT, Blocks.FARMLAND).setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT).setTranslationKey("mooncakecraft.sesame_seeds").setRegistryName("mooncakecraft:sesame_seeds"),
                 new Item().setRegistryName("mooncakecraft:icon")
         );
     }

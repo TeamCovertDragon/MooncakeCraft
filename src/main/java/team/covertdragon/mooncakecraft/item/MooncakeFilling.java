@@ -22,7 +22,7 @@ public class MooncakeFilling extends Item {
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
         this.setNoRepair();
-        this.setUnlocalizedName("mooncakecraft.filling");
+        this.setTranslationKey("mooncakecraft.filling");
     }
 
     @Override
@@ -36,7 +36,7 @@ public class MooncakeFilling extends Item {
 
     @Nonnull
     @Override
-    public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "." + MooncakeFillingType.VALUES[stack.getMetadata()].localizationKey;
+    public String getTranslationKey(ItemStack stack) {
+        return super.getTranslationKey() + "." + MooncakeFillingType.VALUES[stack.getMetadata()].localizationKey;
     }
 }

@@ -33,7 +33,7 @@ import team.covertdragon.mooncakecraft.MooncakeConstants;
 public class MooncakeMold extends Item {
     public MooncakeMold() {
         setCreativeTab(MooncakeConstants.TAB_MOONCAKE_CRAFT);
-        setUnlocalizedName("mooncakecraft.mooncakemold");
+        setTranslationKey("mooncakecraft.mooncakemold");
         setMaxStackSize(1);
     }
 

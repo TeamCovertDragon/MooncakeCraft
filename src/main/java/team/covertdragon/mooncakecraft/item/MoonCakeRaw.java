@@ -22,12 +22,12 @@ public class MoonCakeRaw extends Item {
         this.setHasSubtypes(true);
         this.setMaxDamage(0);
         this.setNoRepair();
-        this.setUnlocalizedName("item.mooncakecraft.mooncakeraw"); // Dumb check
+        this.setTranslationKey("item.mooncakecraft.mooncakeraw"); // Dumb check
     }
 
     @Nonnull
     @Override
-    public String getUnlocalizedName(ItemStack stack) {
+    public String getTranslationKey(ItemStack stack) {
         return "item.mooncakecraft.mooncakeraw." + MooncakeFillingType.getByOrdinal(stack.getMetadata()).localizationKey;
     }
 
