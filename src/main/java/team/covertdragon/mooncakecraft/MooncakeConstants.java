@@ -20,6 +20,8 @@ public class MooncakeConstants {
 
     public static final String NAME = "MooncakeCraft";
 
+    public static final String KEY_FILLING_TYPE = "filling";
+
     public static final CreativeTabs TAB_MOONCAKE_CRAFT = new CreativeTabs(MODID) {
         @Override
         public ItemStack createIcon() {

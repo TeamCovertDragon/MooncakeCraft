@@ -47,12 +47,6 @@ public enum MooncakeFillingType {
      */
     LOTUS_SEED_PASTE_WITH_DOUBLE_YOLK(15, 15.0F);
 
-    public static final MooncakeFillingType[] VALUES = MooncakeFillingType.values();
-
-    public static MooncakeFillingType getByOrdinal(int ordinal) {
-        return ordinal < VALUES.length ? VALUES[ordinal] : INVALID;
-    }
-
     final int hunger;
     final float saturation;
     final String localizationKey;

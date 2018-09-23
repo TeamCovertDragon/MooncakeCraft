@@ -13,13 +13,14 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import team.covertdragon.mooncakecraft.api.MooncakeRegistry;
+import team.covertdragon.mooncakecraft.util.NBTUtil;
 
 import javax.annotation.Nonnull;
 
 public class MooncakeFilling extends Item {
 
     public MooncakeFilling() {
-        this.setHasSubtypes(true);
         this.setMaxDamage(0);
         this.setNoRepair();
         this.setTranslationKey("mooncakecraft.filling");
@@ -28,15 +29,17 @@ public class MooncakeFilling extends Item {
     @Override
     public void getSubItems(@Nonnull CreativeTabs tab, @Nonnull NonNullList<ItemStack> stacks) {
         if (tab == MooncakeConstants.TAB_MOONCAKE_CRAFT) {
-            for (int meta = 1; meta < MooncakeFillingType.VALUES.length; meta++) {
-                stacks.add(new ItemStack(this, 1, meta));
-            }
+
         }
     }
 
     @Nonnull
     @Override
     public String getTranslationKey(ItemStack stack) {
-        return super.getTranslationKey() + "." + MooncakeFillingType.VALUES[stack.getMetadata()].localizationKey;
+        String fillingType = NBTUtil.getString(stack.getTagCompound(), MooncakeConstants.KEY_FILLING_TYPE);
+        if (!MooncakeRegistry.INSTANCE.isRegistered(fillingType)) {
+            fillingType = MooncakeRegistry.FALLBACK_FILLING_TYPE;
+        }
+        return super.getTranslationKey() + "." + fillingType;
     }
 }

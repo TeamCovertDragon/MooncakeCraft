@@ -6,13 +6,14 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package team.covertdragon.mooncakecraft;
+package team.covertdragon.mooncakecraft.supports;
 
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
 import mezz.jei.api.ingredients.IIngredientBlacklist;
 import net.minecraft.item.ItemStack;
+import team.covertdragon.mooncakecraft.MooncakeConstants;
 
 @JEIPlugin
 public class MooncakeJEICompatibility implements IModPlugin {

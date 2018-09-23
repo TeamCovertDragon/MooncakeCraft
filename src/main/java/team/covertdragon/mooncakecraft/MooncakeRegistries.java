@@ -56,13 +56,5 @@ public class MooncakeRegistries {
         );
     }
 
-    @SubscribeEvent
-    public static void onBlockMissing(RegistryEvent.MissingMappings<Block> event) {
-        for (RegistryEvent.MissingMappings.Mapping<Block> mapping : event.getAllMappings()) {
-            if (new ResourceLocation(MooncakeConstants.MODID, "jujube_plant").equals(mapping.key)) {
-                mapping.remap(Blocks.WHEAT);
-                break;
-            }
-        }
-    }
+
 }

@@ -1,6 +1,8 @@
 Thumbs.db
+.DS_Store
 /run
 /out
+/classes
 /gradle
 /eclipse
 /build
