@@ -10,6 +10,11 @@ package team.covertdragon.mooncakecraft.item;
 
 import java.util.Locale;
 
+/**
+ * @deprecated All constants are now migrated to the new system, delete
+ * when we are ready.
+ */
+@Deprecated
 public enum MooncakeFillingType {
 
     /**

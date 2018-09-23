@@ -8,6 +8,7 @@ import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 public final class MooncakeRegistry {
@@ -36,7 +37,7 @@ public final class MooncakeRegistry {
         if (frozen) {
             return false;
         }
-        behaviors.putIfAbsent(uniqueName, logic);
+        behaviors.putIfAbsent(uniqueName, Objects.requireNonNull(logic, "MooncakeFillingLogic cannot be null"));
         hungerHealData.put(uniqueName, hungerHeal);
         saturationData.put(uniqueName, saturation);
         return true;

@@ -16,6 +16,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
@@ -79,7 +80,16 @@ public class Mooncake extends ItemFood {
     @Override
     public void getSubItems(@Nonnull CreativeTabs tab, @Nonnull NonNullList<ItemStack> stacks) {
         if (tab == MooncakeConstants.TAB_MOONCAKE_CRAFT) {
-
+            for (String type : MooncakeRegistry.INSTANCE.getAllKnownFillings()) {
+                if (MooncakeRegistry.FALLBACK_FILLING_TYPE.equals(type)) {
+                    continue;
+                }
+                ItemStack item = new ItemStack(this);
+                NBTTagCompound data = new NBTTagCompound();
+                data.setString(MooncakeConstants.KEY_FILLING_TYPE, type);
+                item.setTagCompound(data);
+                stacks.add(item);
+            }
         }
     }
 }
