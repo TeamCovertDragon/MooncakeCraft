@@ -13,6 +13,7 @@ Thumbs.db
 gradlew
 gradlew.bat
 gradle.properties
+/.idea
 *.iml
 *.ipr
 *.iws
