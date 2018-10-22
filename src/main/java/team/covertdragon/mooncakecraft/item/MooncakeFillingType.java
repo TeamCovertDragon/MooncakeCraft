@@ -10,6 +10,11 @@ package team.covertdragon.mooncakecraft.item;
 
 import java.util.Locale;
 
+/**
+ * @deprecated All constants are now migrated to the new system, delete
+ * when we are ready.
+ */
+@Deprecated
 public enum MooncakeFillingType {
 
     /**
@@ -46,12 +51,6 @@ public enum MooncakeFillingType {
      * Simplified Chinese "双黄莲蓉".
      */
     LOTUS_SEED_PASTE_WITH_DOUBLE_YOLK(15, 15.0F);
-
-    public static final MooncakeFillingType[] VALUES = MooncakeFillingType.values();
-
-    public static MooncakeFillingType getByOrdinal(int ordinal) {
-        return ordinal < VALUES.length ? VALUES[ordinal] : INVALID;
-    }
 
     final int hunger;
     final float saturation;

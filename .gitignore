@@ -1,6 +1,8 @@
 Thumbs.db
+.DS_Store
 /run
 /out
+/classes
 /gradle
 /eclipse
 /build
@@ -11,6 +13,7 @@ Thumbs.db
 gradlew
 gradlew.bat
 gradle.properties
+/.idea
 *.iml
 *.ipr
 *.iws

@@ -9,8 +9,7 @@
 package team.covertdragon.mooncakecraft.client;
 
 import team.covertdragon.mooncakecraft.MooncakeConstants;
-import team.covertdragon.mooncakecraft.item.MooncakeFillingType;
-import net.minecraft.client.renderer.block.model.ModelBakery;
+import team.covertdragon.mooncakecraft.api.MooncakeRegistry;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
@@ -19,43 +18,26 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.Set;
+
 @SideOnly(Side.CLIENT)
 @Mod.EventBusSubscriber(modid = MooncakeConstants.MODID, value = Side.CLIENT)
 public class MooncakeRegistriesClient {
-
+    
     @SubscribeEvent
     public static void onModelRegistry(ModelRegistryEvent event) {
+        Set<String> allKnownFillings = MooncakeRegistry.INSTANCE.getAllKnownFillings();
         //Registries for mooncakes
-        ModelResourceLocation[] modelLocationArray = new ModelResourceLocation[MooncakeFillingType.VALUES.length];
-        for (int i = 0; i < MooncakeFillingType.VALUES.length; i++) {
-            modelLocationArray[i] = new ModelResourceLocation("mooncakecraft:mooncake_" + MooncakeFillingType.getByOrdinal(i).getLocalizationKey(), "inventory");
-        }
-        ModelBakery.registerItemVariants(MooncakeConstants.MOONCAKE_ITEM, modelLocationArray);
-        ModelLoader.setCustomMeshDefinition(MooncakeConstants.MOONCAKE_ITEM, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_" + MooncakeFillingType.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
+        ModelLoader.setCustomMeshDefinition(MooncakeConstants.MOONCAKE_ITEM, new MooncakeFillingPostfixMeshDefinition("mooncake_").initWithVariants(MooncakeConstants.MOONCAKE_ITEM, allKnownFillings));
 
         //Registries for mooncake fillings
-        ModelResourceLocation[] modelLocationArray1 = new ModelResourceLocation[MooncakeFillingType.VALUES.length];
-        for (int i = 0; i < MooncakeFillingType.VALUES.length; i++) {
-            modelLocationArray1[i] = new ModelResourceLocation("mooncakecraft:mooncake_filling_" + MooncakeFillingType.getByOrdinal(i).getLocalizationKey(), "inventory");
-        }
-        ModelBakery.registerItemVariants(MooncakeConstants.MOONCAKE_FILLING, modelLocationArray1);
-        ModelLoader.setCustomMeshDefinition(MooncakeConstants.MOONCAKE_FILLING, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_filling_" + MooncakeFillingType.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
+        ModelLoader.setCustomMeshDefinition(MooncakeConstants.MOONCAKE_FILLING, new MooncakeFillingPostfixMeshDefinition("mooncake_filling_").initWithVariants(MooncakeConstants.MOONCAKE_FILLING, allKnownFillings));
 
         //Registries for raw mooncakes
-        ModelResourceLocation[] modelLocationArray2 = new ModelResourceLocation[MooncakeFillingType.VALUES.length];
-        for (int i = 0; i < MooncakeFillingType.VALUES.length; i++) {
-            modelLocationArray2[i] = new ModelResourceLocation("mooncakecraft:mooncake_raw_" + MooncakeFillingType.getByOrdinal(i).getLocalizationKey(), "inventory");
-        }
-        ModelBakery.registerItemVariants(MooncakeConstants.RAW_MOONCAKE_ITEM, modelLocationArray2);
-        ModelLoader.setCustomMeshDefinition(MooncakeConstants.RAW_MOONCAKE_ITEM, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_raw_" + MooncakeFillingType.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
+        ModelLoader.setCustomMeshDefinition(MooncakeConstants.RAW_MOONCAKE_ITEM, new MooncakeFillingPostfixMeshDefinition("mooncake_raw_").initWithVariants(MooncakeConstants.RAW_MOONCAKE_ITEM, allKnownFillings));
 
         //Registries for unshaped mooncakes
-        ModelResourceLocation[] modelLocationArray3 = new ModelResourceLocation[MooncakeFillingType.VALUES.length];
-        for (int i = 0; i < MooncakeFillingType.VALUES.length; i++) {
-            modelLocationArray3[i] = new ModelResourceLocation("mooncakecraft:mooncake_unshaped_" + MooncakeFillingType.getByOrdinal(i).getLocalizationKey(), "inventory");
-        }
-        ModelBakery.registerItemVariants(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM, modelLocationArray3);
-        ModelLoader.setCustomMeshDefinition(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM, itemStack -> new ModelResourceLocation("mooncakecraft:mooncake_unshaped_" + MooncakeFillingType.getByOrdinal(itemStack.getMetadata()).getLocalizationKey(), "inventory"));
+        ModelLoader.setCustomMeshDefinition(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM, new MooncakeFillingPostfixMeshDefinition("mooncake_unshaped_").initWithVariants(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM, allKnownFillings));
 
         //Registries for other things
         ModelLoader.setCustomModelResourceLocation(MooncakeConstants.WHEAT_FLOUR, 0, new ModelResourceLocation("mooncakecraft:wheat_flour", "inventory"));
