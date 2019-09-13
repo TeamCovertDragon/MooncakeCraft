@@ -18,6 +18,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -63,7 +64,11 @@ public class MooncakeMold extends Item {
                 stack.getTagCompound().setInteger("hitCount", stack.getTagCompound().getInteger("hitCount") + 1);
 
                 if (stack.getTagCompound().getInteger("hitCount") >= 5) {
-                    ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(MooncakeConstants.RAW_MOONCAKE_ITEM, 1, stack.getTagCompound().getInteger("meta")));
+                    final ItemStack result = new ItemStack(MooncakeConstants.RAW_MOONCAKE_ITEM);
+                    final NBTTagCompound data = new NBTTagCompound();
+                    data.setString(MooncakeConstants.KEY_FILLING_TYPE, stack.getTagCompound().getString(MooncakeConstants.KEY_FILLING_TYPE));
+                    result.setTagCompound(data);
+                    ItemHandlerHelper.giveItemToPlayer(player, result);
                     stack.setTagCompound(null);
                 }
 
@@ -78,7 +83,11 @@ public class MooncakeMold extends Item {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         if (stack.hasTagCompound()) {
-            tooltip.add(new ItemStack(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM, 1, stack.getTagCompound().getInteger("meta")).getDisplayName());
+            final ItemStack fake = new ItemStack(MooncakeConstants.UNSHAPED_MOONCAKE_ITEM);
+            final NBTTagCompound data = new NBTTagCompound();
+            data.setString(MooncakeConstants.KEY_FILLING_TYPE, stack.getTagCompound().getString(MooncakeConstants.KEY_FILLING_TYPE));
+            fake.setTagCompound(data);
+            tooltip.add(fake.getDisplayName());
         }
     }
 }

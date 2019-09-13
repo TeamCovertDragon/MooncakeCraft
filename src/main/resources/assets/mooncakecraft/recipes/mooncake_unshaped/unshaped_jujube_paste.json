@@ -3,13 +3,14 @@
   "type": "mooncakecraft:remain_bottle",
   "result": {
     "item": "mooncakecraft:mooncakeunshaped",
-    "data": 3,
+    "nbt": "{filling:\"jujube_paste\"}",
     "Count": 1
   },
   "ingredients": [
     {
+      "type": "minecraft:item_nbt",
       "item": "mooncakecraft:mooncake_filling",
-      "data": 3
+      "nbt": "{filling:\"jujube_paste\"}"
     },
     {
       "item": "#flour"

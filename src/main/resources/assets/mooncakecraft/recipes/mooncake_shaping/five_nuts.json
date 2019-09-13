@@ -4,12 +4,13 @@
   "result": {
     "item": "mooncakecraft:mooncakemold",
     "Count": 1,
-    "nbt": "{meta:1}"
+    "nbt": "{filling:\"five_nuts\"}"
   },
   "ingredients": [
     {
+      "type": "minecraft:item_nbt",
       "item": "mooncakecraft:mooncakeunshaped",
-      "data": 4
+      "nbt": "{filling:\"five_nuts\"}"
     },
     {
       "item": "mooncakecraft:mooncakemold"

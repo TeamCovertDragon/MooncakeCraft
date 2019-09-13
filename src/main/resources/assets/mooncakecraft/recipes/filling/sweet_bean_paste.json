@@ -3,7 +3,7 @@
   "type": "forge:ore_shapeless",
   "result": {
     "item": "mooncakecraft:mooncake_filling",
-    "data": 2,
+    "nbt": "{filling:\"sweet_bean_paste\"}",
     "Count": 1
   },
   "_comment": "We haven't implemented red bean (adzuki bean) yet, so we use cocoa bean for placeholder",

@@ -79,7 +79,7 @@ public class Mooncake extends ItemFood {
 
     @Override
     public void getSubItems(@Nonnull CreativeTabs tab, @Nonnull NonNullList<ItemStack> stacks) {
-        if (tab == MooncakeConstants.TAB_MOONCAKE_CRAFT) {
+        if (this.isInCreativeTab(tab)) {
             for (String type : MooncakeRegistry.INSTANCE.getAllKnownFillings()) {
                 if (MooncakeRegistry.FALLBACK_FILLING_TYPE.equals(type)) {
                     continue;

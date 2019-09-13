@@ -3,7 +3,7 @@
   "type": "mooncakecraft:remain_bottle",
   "result": {
     "item": "mooncakecraft:mooncake_filling",
-    "data": 5,
+    "nbt": "{filling:\"lotus_paste_with_yolk\"}",
     "Count": 1
   },
   "ingredients": [

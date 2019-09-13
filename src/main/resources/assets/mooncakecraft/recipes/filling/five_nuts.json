@@ -3,7 +3,7 @@
   "type": "forge:ore_shapeless",
   "result": {
     "item": "mooncakecraft:mooncake_filling",
-    "data": 4,
+    "nbt": "{filling:\"five_nuts\"}",
     "Count": 1
   },
   "ingredients": [

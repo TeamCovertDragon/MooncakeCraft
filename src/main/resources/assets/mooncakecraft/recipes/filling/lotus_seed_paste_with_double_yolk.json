@@ -3,7 +3,7 @@
   "type": "mooncakecraft:remain_bottle",
   "result": {
     "item": "mooncakecraft:mooncake_filling",
-    "data": 6,
+    "nbt": "{filling:\"jujube_paste_with_double_yolk\"}",
     "Count": 1
   },
   "ingredients": [

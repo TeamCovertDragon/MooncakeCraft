@@ -3,7 +3,7 @@
   "type": "forge:ore_shapeless",
   "result": {
     "item": "mooncakecraft:mooncake_filling",
-    "data": 3,
+    "nbt": "{filling:\"jujube_paste\"}",
     "Count": 1
   },
   "ingredients": [

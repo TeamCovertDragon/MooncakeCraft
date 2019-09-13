@@ -1,0 +1,20 @@
+{
+  "group": "mooncakecraft:temp",
+  "type": "forge:ore_shapeless",
+    "result": {
+      "item": "mooncakecraft:mooncake",
+      "nbt": "{filling:\"lotus_seed_paste_with_double_yolk\"}",
+      "Count": 1
+    },
+    "ingredients": [
+      {
+        "type": "minecraft:item_nbt",
+        "item": "mooncakecraft:mooncakeraw",
+        "nbt": "{filling:\"lotus_seed_paste_with_double_yolk\"}"
+      },
+      {
+        "item": "minecraft:coal",
+        "data": 1
+      }
+    ]
+}

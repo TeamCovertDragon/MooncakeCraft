@@ -8,6 +8,7 @@
 
 package team.covertdragon.mooncakecraft.item;
 
+import net.minecraft.nbt.NBTTagCompound;
 import team.covertdragon.mooncakecraft.MooncakeConstants;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -38,8 +39,17 @@ public class MoonCakeRaw extends Item {
 
     @Override
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> stacks) {
-        if (tab == MooncakeConstants.TAB_MOONCAKE_CRAFT) {
-
+        if (this.isInCreativeTab(tab)) {
+            for (String type : MooncakeRegistry.INSTANCE.getAllKnownFillings()) {
+                if (MooncakeRegistry.FALLBACK_FILLING_TYPE.equals(type)) {
+                    continue;
+                }
+                ItemStack item = new ItemStack(this);
+                NBTTagCompound data = new NBTTagCompound();
+                data.setString(MooncakeConstants.KEY_FILLING_TYPE, type);
+                item.setTagCompound(data);
+                stacks.add(item);
+            }
         }
     }
 }

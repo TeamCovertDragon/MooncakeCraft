@@ -3,13 +3,14 @@
   "type": "mooncakecraft:remain_bottle",
   "result": {
     "item": "mooncakecraft:mooncakeunshaped",
-    "data": 5,
+    "nbt": "{filling:\"lotus_paste_with_yolk\"}",
     "Count": 1
   },
   "ingredients": [
     {
+      "type": "minecraft:item_nbt",
       "item": "mooncakecraft:mooncake_filling",
-      "data": 5
+      "nbt": "{filling:\"lotus_paste_with_yolk\"}"
     },
     {
       "item": "#flour"

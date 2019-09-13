@@ -4,12 +4,13 @@
   "result": {
     "item": "mooncakecraft:mooncakemold",
     "Count": 1,
-    "nbt": "{meta:1}"
+    "nbt": "{filling:\"lotus_seed_paste\"}"
   },
   "ingredients": [
     {
+      "type": "minecraft:item_nbt",
       "item": "mooncakecraft:mooncakeunshaped",
-      "data": 1
+      "nbt": "{filling:\"lotus_seed_paste\"}"
     },
     {
       "item": "mooncakecraft:mooncakemold"
